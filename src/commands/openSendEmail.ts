@@ -47,72 +47,76 @@ export default (
     },
 
     createForm() {
-      const el = document.createElement('div');
-      el.id = 'form-data';
-
-      const btnEl = document.createElement('button');
-      btnEl.innerHTML = getI18nLabel('button');
-      btnEl.className = `${pfx}btn-prim ${pfx}btn-import`;
-      btnEl.onclick = () => this.onSend();
-
-      const markupEmail = this.elFactory(
-        'div',
-        { class: 'input-group' },
-        this.elFactory(
-          'label',
-          {
-            for: 'email',
-          },
-          getI18nLabel('inputEmail.label')
-        ),
-        this.elFactory('input', {
-          id: 'email',
-          name: 'email',
-          placeholder: getI18nLabel('inputEmail.placeholder'),
-        })
-      );
-      const markupSubject = this.elFactory(
-        'div',
-        { class: 'input-group' },
-        this.elFactory(
-          'label',
-          {
-            for: 'subject',
-          },
-          getI18nLabel('inputSubject.label')
-        ),
-        this.elFactory('input', {
-          id: 'subject',
-          name: 'subject',
-          placeholder: getI18nLabel('inputSubject.placeholder'),
-        })
-      );
-      const markupHtml = this.elFactory(
-        'div',
-        { class: 'input-group' },
-        this.elFactory(
-          'label',
-          {
-            for: 'inputHtml',
-          },
-          getI18nLabel('inputHtml.label')
-        ),
-        this.elFactory(
-          'textarea',
-          {
-            id: 'inputHtml',
-            name: 'inputHtml',
-            rows: 5,
-            disabled: true,
-          },
-          editor.Commands.run(cmdGetMjmlToHtml).html.trim()
-        )
-      );
-
-      el.appendChild(markupEmail);
-      el.appendChild(markupSubject);
-      el.appendChild(markupHtml);
-      el.appendChild(btnEl);
+      if (document.getElementById("form-data") !== null){
+        const el = document.getElementById("form-data");
+      } else {
+        const el = document.createElement('div');
+        el.id = 'form-data';
+  
+        const btnEl = document.createElement('button');
+        btnEl.innerHTML = getI18nLabel('button');
+        btnEl.className = `${pfx}btn-prim ${pfx}btn-import`;
+        btnEl.onclick = () => this.onSend();
+  
+        const markupEmail = this.elFactory(
+          'div',
+          { class: 'input-group' },
+          this.elFactory(
+            'label',
+            {
+              for: 'email',
+            },
+            getI18nLabel('inputEmail.label')
+          ),
+          this.elFactory('input', {
+            id: 'email',
+            name: 'email',
+            placeholder: getI18nLabel('inputEmail.placeholder'),
+          })
+        );
+        const markupSubject = this.elFactory(
+          'div',
+          { class: 'input-group' },
+          this.elFactory(
+            'label',
+            {
+              for: 'subject',
+            },
+            getI18nLabel('inputSubject.label')
+          ),
+          this.elFactory('input', {
+            id: 'subject',
+            name: 'subject',
+            placeholder: getI18nLabel('inputSubject.placeholder'),
+          })
+        );
+        const markupHtml = this.elFactory(
+          'div',
+          { class: 'input-group' },
+          this.elFactory(
+            'label',
+            {
+              for: 'inputHtml',
+            },
+            getI18nLabel('inputHtml.label')
+          ),
+          this.elFactory(
+            'textarea',
+            {
+              id: 'inputHtml',
+              name: 'inputHtml',
+              rows: 5,
+              disabled: true,
+            },
+            editor.Commands.run(cmdGetMjmlToHtml).html.trim()
+          )
+        );
+  
+        el.appendChild(markupEmail);
+        el.appendChild(markupSubject);
+        el.appendChild(markupHtml);
+        el.appendChild(btnEl);
+      }
 
       return el;
     },
