@@ -31,145 +31,738 @@
       .input-group textarea {
         padding: 6px 4px;
       }
+      .gjs-asset-manager .gjs-am-file-uploader {
+        display: none;
+      }
+      .gjs-asset-manager .gjs-am-assets-cont {
+        width: 100%;
+      }
     </style>
   </head>
 
   <body>
     <div id="gjs" style="height: 0px; overflow: hidden">
-      <mjml>
+      <mjml owa="desktop">
         <mj-head>
-          <mj-breakpoint width="800px" />
-          <mj-style> .slogan { background: #000; } </mj-style>
+          <mj-breakpoint width="560px" />
+          <mj-style>
+            @media only screen and (max-width: 560px) { .td-padding-x-40 td {
+            padding-left: 40px!important; padding-right: 40px!important; }
+            .td-padding-x-24 > table > tbody > tr > td { padding-left:
+            20px!important; padding-right: 20px!important; } .td-padding-x-0 >
+            table > tbody > tr > td { padding-left: 0px!important;
+            padding-right: 0px!important; } .td-padding-top-24 > table > tbody >
+            tr > td { padding-top: 20px!important; } .td-padding-top-40 > table
+            > tbody > tr > td { padding-top: 40px!important; }
+            .td-padding-bottom-24 > table > tbody > tr > td { padding-bottom:
+            20px!important; } .td-padding-bottom-40 > table > tbody > tr > td {
+            padding-bottom: 40px!important; } .td-bg-white > table > tbody > tr
+            > td { background-color: #fff!important; } }
+          </mj-style>
         </mj-head>
-        <mj-body>
-          <!-- Company Header -->
-          <mj-section background-color="#f0f0f0">
-            <mj-column>
-              <mj-text font-family="Barlow">A first line of text</mj-text>
-              <mj-spacer height="50px" />
-            </mj-column>
+        <mj-body background-color="#eeeeee" width="620px">
+          <mj-section padding="0" background-color="#000000">
+            <mj-group>
+              <mj-column padding="20px" vertical-align="middle">
+                <mj-image
+                  width="282px"
+                  padding="0px"
+                  href="https://www.orange.es/index_cliente"
+                  src="https://dummyimage.com/603x120/ff6347/fff" />
+              </mj-column>
+              <mj-column padding="20px" vertical-align="middle">
+                <mj-text
+                  font-weight="400"
+                  font-size="15px"
+                  line-height="22px"
+                  font-family="Helvetica,Arial"
+                  color="#ffffff"
+                  align="right"
+                  padding="0"
+                  >29-06-2022</mj-text
+                >
+              </mj-column>
+            </mj-group>
           </mj-section>
 
-          <!-- Image Header -->
+          <!-- Digital Tools informa - 2 columns -->
           <mj-section
-            background-url="http://1.bp.blogspot.com/-TPrfhxbYpDY/Uh3Refzk02I/AAAAAAAALw8/5sUJ0UUGYuw/s1600/New+York+in+The+1960's+-+70's+(2).jpg"
-            background-size="cover"
-            background-repeat="no-repeat">
-            <mj-column>
+            padding="0"
+            background-color="#000000"
+            border-top="1px solid #ffffff"
+            border-bottom="1px solid #ffffff">
+            <mj-column padding="0 20px" vertical-align="middle">
               <mj-text
-                css-class="slogan"
-                align="center"
-                color="#fff"
-                font-size="40px"
-                font-family="Helvetica Neue"
-                >Slogan here</mj-text
-              >
-              <mj-button background-color="#F63A4D" href="#">
-                Promotion
-              </mj-button>
+                font-weight="700"
+                font-size="18px"
+                line-height="20px"
+                font-family="Helvetica,Arial"
+                color="#ffffff">
+                Digital Tools Informa
+              </mj-text>
+              <mj-text
+                font-weight="700"
+                font-size="16px"
+                line-height="18px"
+                font-family="Helvetica,Arial"
+                color="#ffffff">
+                Como siempre, desde nuestro espacio en Confluence tienes acceso
+                a toda la información de Digital Tool.
+              </mj-text>
+            </mj-column>
+            <mj-column padding="0" vertical-align="middle">
+              <mj-image
+                width="310px"
+                padding="0"
+                src="https://dummyimage.com/310x140/800080/fff" />
             </mj-column>
           </mj-section>
 
-          <!-- Intro text -->
-          <mj-wrapper background-color="#ffe9f7" padding="10px">
-            <mj-section background-color="#eaeffa">
-              <mj-group background-color="#fffadd">
-                <mj-column>
-                  <mj-text
-                    font-style="italic"
-                    font-size="20px"
-                    font-family="Helvetica Neue"
-                    color="#626262"
-                    >My Awesome Text</mj-text
-                  >
-                  <mj-text color="#525252">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Proin rutrum enim eget magna efficitur, eu semper augue
-                    semper. Aliquam erat volutpat. Cras id dui lectus.
-                    Vestibulum sed finibus lectus, sit amet suscipit nibh. Proin
-                    nec commodo purus. Sed eget nulla elit. Nulla aliquet mollis
-                    faucibus.
-                  </mj-text>
-                  <mj-button background-color="#F45E43" href="#"
-                    >Learn more</mj-button
-                  >
-                </mj-column>
-              </mj-group>
-            </mj-section>
-          </mj-wrapper>
+          <!-- Digital Tools informa - 1 columns -->
+          <mj-section padding="0" background-color="#000000">
+            <mj-column padding="24px 40px">
+              <mj-text
+                padding="0"
+                font-weight="700"
+                font-size="18px"
+                line-height="20px"
+                font-family="Helvetica,Arial"
+                color="#ffffff">
+                Digital Tools Informa
+              </mj-text>
+            </mj-column>
+          </mj-section>
 
-          <!-- Side image -->
-          <mj-section background-color="white">
-            <mj-column>
+          <!-- Section Divider-->
+          <mj-section padding="0">
+            <mj-column padding="0">
+              <mj-spacer height="10px" container-background-color="#eeeeee" />
+            </mj-column>
+          </mj-section>
+
+          <!-- 2 columns: image center -->
+          <mj-section
+            padding="0"
+            background-color="#4bb4e6"
+            css-class="td-bg-white">
+            <mj-column
+              width="32%"
+              padding="0"
+              vertical-align="middle"
+              css-class="td-padding-x-24 td-padding-top-40">
+              <mj-image
+                width="414px"
+                padding="0"
+                src="https://dummyimage.com/414x414/800080/fff" />
+            </mj-column>
+            <mj-column
+              width="68%"
+              padding="20px 40px"
+              vertical-align="middle"
+              background-color="#ffffff"
+              css-class="td-padding-x-24">
+              <mj-text
+                padding="0 0 10px 0"
+                font-weight="700"
+                font-size="18px"
+                line-height="20px"
+                font-family="Helvetica,Arial"
+                color="#000000">
+                Imagen transparente alineada en el centro y fondo azul
+                <table
+                  border="0"
+                  cellpadding="0"
+                  cellspacing="0"
+                  role="presentation"
+                  style="vertical-align: top"
+                  width="100%">
+                  <tbody>
+                    <tr>
+                      <td
+                        align="left"
+                        style="
+                          font-size: 0px;
+                          padding: 10px 0px 10px;
+                          word-break: break-word;
+                        ">
+                        <p
+                          style="
+                            border-top: solid 2px #ff7900;
+                            font-size: 1px;
+                            margin: 0px;
+                            width: 50px;
+                          "></p>
+                        <!--[if mso | IE
+                          ]><table
+                            align="left"
+                            border="0"
+                            cellpadding="0"
+                            cellspacing="0"
+                            style="
+                              border-top: solid 2px #ff7900;
+                              font-size: 1px;
+                              margin: 0px;
+                              width: 50px;
+                            "
+                            role="presentation"
+                            width="50px">
+                            <tr>
+                              <td style="height: 0; line-height: 0">&nbsp;</td>
+                            </tr>
+                          </table><!
+                        [endif]-->
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </mj-text>
+              <mj-text
+                padding="0 0 10px 0"
+                font-weight="400"
+                font-size="16px"
+                line-height="18px"
+                font-family="Helvetica,Arial"
+                color="#333333">
+                <div
+                  style="
+                    font-size: 16px;
+                    line-height: 18px;
+                    padding-bottom: 8px;
+                  ">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit ipsum
+                  dolor sit amet, consectetur adipiscing elit.
+                </div>
+                <div
+                  style="
+                    font-size: 16px;
+                    line-height: 18px;
+                    padding-bottom: 8px;
+                  ">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit ipsum
+                  dolor sit amet, consectetur adipiscing elit.
+                </div>
+                <ul style="margin: 0; padding: 0; list-style-position: inside">
+                  <li style="padding: 10px 0 0">
+                    <a
+                      style="color: #ff7900; font-size: 16px; line-height: 18px"
+                      href="#!">
+                      <span style="color: #ff7900">Enlace</span>
+                    </a>
+                  </li>
+                </ul>
+              </mj-text>
+            </mj-column>
+          </mj-section>
+
+          <!-- Section Divider-->
+          <mj-section padding="0">
+            <mj-column padding="0">
+              <mj-spacer height="10px" container-background-color="#eeeeee" />
+            </mj-column>
+          </mj-section>
+
+          <!-- 2 columns: image bottom -->
+          <mj-section padding="0" background-color="#4bb4e6">
+            <mj-column
+              width="32%"
+              padding="0"
+              vertical-align="bottom"
+              background-color="#4bb4e6">
               <mj-image
                 width="200px"
-                src="https://designspell.files.wordpress.com/2012/01/sciolino-paris-bw.jpg" />
+                padding="0"
+                src="https://dummyimage.com/414x414/800080/fff" />
             </mj-column>
-            <mj-column>
+            <mj-column
+              width="68%"
+              padding="20px 40px"
+              vertical-align="middle"
+              background-color="#ffffff">
               <mj-text
-                font-style="italic"
-                font-size="20px"
-                font-family="Helvetica Neue"
-                color="#626262">
-                Find amazing places ...
+                padding="0 0 10px 0"
+                font-weight="700"
+                font-size="18px"
+                line-height="20px"
+                font-family="Helvetica,Arial"
+                color="#000000">
+                Imagen alineada abajo y fondo azul
+                <table
+                  border="0"
+                  cellpadding="0"
+                  cellspacing="0"
+                  role="presentation"
+                  style="vertical-align: top"
+                  width="100%">
+                  <tbody>
+                    <tr>
+                      <td
+                        align="left"
+                        style="
+                          font-size: 0px;
+                          padding: 10px 0px 10px;
+                          word-break: break-word;
+                        ">
+                        <p
+                          style="
+                            border-top: solid 2px #ff7900;
+                            font-size: 1px;
+                            margin: 0px;
+                            width: 50px;
+                          "></p>
+                        <!--[if mso | IE
+                          ]><table
+                            align="left"
+                            border="0"
+                            cellpadding="0"
+                            cellspacing="0"
+                            style="
+                              border-top: solid 2px #ff7900;
+                              font-size: 1px;
+                              margin: 0px;
+                              width: 50px;
+                            "
+                            role="presentation"
+                            width="50px">
+                            <tr>
+                              <td style="height: 0; line-height: 0">&nbsp;</td>
+                            </tr>
+                          </table><!
+                        [endif]-->
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
               </mj-text>
-              <mj-text color="#525252">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin
-                rutrum enim eget magna efficitur, eu semper augue semper.
-                Aliquam erat volutpat. Cras id dui lectus. Vestibulum sed
-                finibus lectus.</mj-text
-              >
+              <mj-text
+                padding="0 0 10px 0"
+                font-weight="400"
+                font-size="16px"
+                line-height="18px"
+                font-family="Helvetica,Arial"
+                color="#333333">
+                <div
+                  style="
+                    font-size: 16px;
+                    line-height: 18px;
+                    padding-bottom: 8px;
+                  ">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit ipsum
+                  dolor sit amet, consectetur adipiscing elit.
+                </div>
+                <div
+                  style="
+                    font-size: 16px;
+                    line-height: 18px;
+                    padding-bottom: 8px;
+                  ">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit ipsum
+                  dolor sit amet, consectetur adipiscing elit.
+                </div>
+                <ul style="margin: 0; padding: 0; list-style-position: inside">
+                  <li style="padding: 10px 0 0">
+                    <a
+                      style="color: #ff7900; font-size: 16px; line-height: 18px"
+                      href="#!">
+                      <span style="color: #ff7900">Enlace</span>
+                    </a>
+                  </li>
+                </ul>
+              </mj-text>
             </mj-column>
           </mj-section>
-          <mj-section>
-            <mj-column>
+
+          <!-- Section Divider-->
+          <mj-section padding="0">
+            <mj-column padding="0">
+              <mj-spacer height="10px" container-background-color="#eeeeee" />
+            </mj-column>
+          </mj-section>
+
+          <!-- 2 columns: image top -->
+          <mj-section padding="0" background-color="#eeeeee">
+            <mj-column
+              width="32%"
+              padding="0"
+              vertical-align="top"
+              background-color="#eeeeee">
+              <mj-image
+                width="200px"
+                padding="0"
+                src="https://dummyimage.com/414x414/800080/fff" />
+            </mj-column>
+            <mj-column
+              width="68%"
+              padding="20px 40px"
+              vertical-align="middle"
+              background-color="#ffffff">
               <mj-text
-                font-style="italic"
-                font-size="20px"
-                font-family="Helvetica Neue"
-                color="#626262"
-                align="center">
-                ... with real-life images
+                padding="0 0 10px 0"
+                font-weight="700"
+                font-size="18px"
+                line-height="20px"
+                font-family="Helvetica,Arial"
+                color="#000000">
+                Imagen alineada top y fondo gris (aspecto transparente)
+                <table
+                  border="0"
+                  cellpadding="0"
+                  cellspacing="0"
+                  role="presentation"
+                  style="vertical-align: top"
+                  width="100%">
+                  <tbody>
+                    <tr>
+                      <td
+                        align="left"
+                        style="
+                          font-size: 0px;
+                          padding: 10px 0px 10px;
+                          word-break: break-word;
+                        ">
+                        <p
+                          style="
+                            border-top: solid 2px #ff7900;
+                            font-size: 1px;
+                            margin: 0px;
+                            width: 50px;
+                          "></p>
+                        <!--[if mso | IE
+                          ]><table
+                            align="left"
+                            border="0"
+                            cellpadding="0"
+                            cellspacing="0"
+                            style="
+                              border-top: solid 2px #ff7900;
+                              font-size: 1px;
+                              margin: 0px;
+                              width: 50px;
+                            "
+                            role="presentation"
+                            width="50px">
+                            <tr>
+                              <td style="height: 0; line-height: 0">&nbsp;</td>
+                            </tr>
+                          </table><!
+                        [endif]-->
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </mj-text>
+              <mj-text
+                padding="0 0 10px 0"
+                font-weight="400"
+                font-size="16px"
+                line-height="18px"
+                font-family="Helvetica,Arial"
+                color="#333333">
+                <div
+                  style="
+                    font-size: 16px;
+                    line-height: 18px;
+                    padding-bottom: 8px;
+                  ">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit ipsum
+                  dolor sit amet, consectetur adipiscing elit.
+                </div>
+                <ul style="margin: 0; padding: 0; list-style-position: inside">
+                  <li style="padding: 10px 0 0">
+                    <a
+                      style="color: #ff7900; font-size: 16px; line-height: 18px"
+                      href="#!">
+                      <span style="color: #ff7900">Enlace</span>
+                    </a>
+                  </li>
+                </ul>
               </mj-text>
             </mj-column>
           </mj-section>
-          <!-- Icons -->
-          <mj-section background-color="#fbfbfb">
-            <mj-column>
-              <mj-image
-                width="100px"
-                src="http://191n.mj.am/img/191n/3s/x0l.png" />
+
+          <!-- Section Divider-->
+          <mj-section padding="0">
+            <mj-column padding="0">
+              <mj-spacer height="10px" container-background-color="#eeeeee" />
             </mj-column>
-            <mj-column>
+          </mj-section>
+
+          <!-- 2 columns: image top -->
+          <mj-section padding="0" background-color="#eeeeee">
+            <mj-column
+              width="32%"
+              padding="0"
+              vertical-align="top"
+              background-color="#eeeeee">
               <mj-image
-                width="100px"
-                src="http://191n.mj.am/img/191n/3s/x01.png" />
+                width="200px"
+                padding="0"
+                src="https://dummyimage.com/414x414/800080/fff" />
             </mj-column>
-            <mj-column>
+            <mj-column
+              width="68%"
+              padding="20px 40px"
+              vertical-align="middle"
+              background-color="#ffffff">
+              <mj-text
+                padding="0 0 10px 0"
+                font-weight="700"
+                font-size="18px"
+                line-height="20px"
+                font-family="Helvetica,Arial"
+                color="#000000">
+                Imagen alineada top y fondo gris (aspecto transparente)
+                <table
+                  border="0"
+                  cellpadding="0"
+                  cellspacing="0"
+                  role="presentation"
+                  style="vertical-align: top"
+                  width="100%">
+                  <tbody>
+                    <tr>
+                      <td
+                        align="left"
+                        style="
+                          font-size: 0px;
+                          padding: 10px 0px 10px;
+                          word-break: break-word;
+                        ">
+                        <p
+                          style="
+                            border-top: solid 2px #ff7900;
+                            font-size: 1px;
+                            margin: 0px;
+                            width: 50px;
+                          "></p>
+                        <!--[if mso | IE
+                          ]><table
+                            align="left"
+                            border="0"
+                            cellpadding="0"
+                            cellspacing="0"
+                            style="
+                              border-top: solid 2px #ff7900;
+                              font-size: 1px;
+                              margin: 0px;
+                              width: 50px;
+                            "
+                            role="presentation"
+                            width="50px">
+                            <tr>
+                              <td style="height: 0; line-height: 0">&nbsp;</td>
+                            </tr>
+                          </table><!
+                        [endif]-->
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </mj-text>
+              <mj-text
+                padding="0 0 10px 0"
+                font-weight="400"
+                font-size="16px"
+                line-height="18px"
+                font-family="Helvetica,Arial"
+                color="#333333">
+                <div
+                  style="
+                    font-size: 16px;
+                    line-height: 18px;
+                    padding-bottom: 8px;
+                  ">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit ipsum
+                  dolor sit amet, consectetur adipiscing elit.
+                </div>
+                <div
+                  style="
+                    font-size: 16px;
+                    line-height: 18px;
+                    padding-bottom: 8px;
+                  ">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit ipsum
+                  dolor sit amet, consectetur adipiscing elit.
+                </div>
+                <ul style="margin: 0; padding: 0; list-style-position: inside">
+                  <li style="padding: 10px 0 0">
+                    <a
+                      style="color: #ff7900; font-size: 16px; line-height: 18px"
+                      href="#!">
+                      <span style="color: #ff7900">Enlace</span>
+                    </a>
+                  </li>
+                </ul>
+              </mj-text>
+            </mj-column>
+          </mj-section>
+
+          <!-- Section Divider-->
+          <mj-section padding="0">
+            <mj-column padding="0">
+              <mj-spacer height="10px" container-background-color="#eeeeee" />
+            </mj-column>
+          </mj-section>
+
+          <!-- 2 columns: image center -->
+          <mj-section padding="0" background-color="#cccccc">
+            <mj-column
+              width="32%"
+              padding="0"
+              vertical-align="middle"
+              background-color="#cccccc">
               <mj-image
-                width="100px"
-                src="http://191n.mj.am/img/191n/3s/x0s.png" />
+                width="200px"
+                padding="0"
+                src="https://dummyimage.com/414x414/800080/fff" />
+            </mj-column>
+            <mj-column
+              width="68%"
+              padding="20px 40px"
+              vertical-align="middle"
+              background-color="#ffffff">
+              <mj-text
+                padding="0 0 10px 0"
+                font-weight="700"
+                font-size="18px"
+                line-height="20px"
+                font-family="Helvetica,Arial"
+                color="#000000">
+                Imagen centrada transparente y fondo gris
+                <table
+                  border="0"
+                  cellpadding="0"
+                  cellspacing="0"
+                  role="presentation"
+                  style="vertical-align: top"
+                  width="100%">
+                  <tbody>
+                    <tr>
+                      <td
+                        align="left"
+                        style="
+                          font-size: 0px;
+                          padding: 10px 0px 10px;
+                          word-break: break-word;
+                        ">
+                        <p
+                          style="
+                            border-top: solid 2px #ff7900;
+                            font-size: 1px;
+                            margin: 0px;
+                            width: 50px;
+                          "></p>
+                        <!--[if mso | IE
+                          ]><table
+                            align="left"
+                            border="0"
+                            cellpadding="0"
+                            cellspacing="0"
+                            style="
+                              border-top: solid 2px #ff7900;
+                              font-size: 1px;
+                              margin: 0px;
+                              width: 50px;
+                            "
+                            role="presentation"
+                            width="50px">
+                            <tr>
+                              <td style="height: 0; line-height: 0">&nbsp;</td>
+                            </tr>
+                          </table><!
+                        [endif]-->
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </mj-text>
+              <mj-text
+                padding="0 0 10px 0"
+                font-weight="400"
+                font-size="16px"
+                line-height="18px"
+                font-family="Helvetica,Arial"
+                color="#333333">
+                <div
+                  style="
+                    font-size: 16px;
+                    line-height: 18px;
+                    padding-bottom: 8px;
+                  ">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </div>
+                <ul
+                  style="
+                    margin: 0;
+                    padding: 0 0 16px;
+                    list-style-position: inside;
+                  ">
+                  <li style="padding: 10px 0 0">
+                    <a
+                      style="color: #ff7900; font-size: 16px; line-height: 18px"
+                      href="#!">
+                      <span style="color: #ff7900">Enlace a un sitio</span>
+                    </a>
+                  </li>
+                  <li style="padding: 10px 0 0">
+                    <a
+                      style="color: #ff7900; font-size: 16px; line-height: 18px"
+                      href="#!">
+                      <span style="color: #ff7900">Enlace a un sitio</span>
+                    </a>
+                  </li>
+                </ul>
+                <div
+                  style="
+                    font-size: 16px;
+                    line-height: 18px;
+                    padding-bottom: 8px;
+                  ">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </div>
+                <ul style="margin: 0; padding: 0; list-style-position: inside">
+                  <li style="padding: 10px 0 0">
+                    <a
+                      style="color: #ff7900; font-size: 16px; line-height: 18px"
+                      href="#!">
+                      <span style="color: #ff7900">Enlace a un sitio</span>
+                    </a>
+                  </li>
+                  <li style="padding: 10px 0 0">
+                    <a
+                      style="color: #ff7900; font-size: 16px; line-height: 18px"
+                      href="#!">
+                      <span style="color: #ff7900">Enlace a un sitio</span>
+                    </a>
+                  </li>
+                  <li style="padding: 10px 0 0">
+                    <a
+                      style="color: #ff7900; font-size: 16px; line-height: 18px"
+                      href="#!">
+                      <span style="color: #ff7900">Y este a otro sitio</span>
+                    </a>
+                  </li>
+                </ul>
+              </mj-text>
+            </mj-column>
+          </mj-section>
+
+          <!-- Section Divider-->
+          <mj-section padding="0">
+            <mj-column padding="0">
+              <mj-spacer height="10px" container-background-color="#eeeeee" />
             </mj-column>
           </mj-section>
 
           <!-- Footer -->
-          <mj-section background-color="#e7e7e7">
-            <mj-column>
-              <mj-button href="#">Hello There!</mj-button>
-              <mj-social font-size="15px" icon-size="30px" mode="horizontal">
-                <mj-social-element name="facebook" href="https://mjml.io/">
-                  Facebook
-                </mj-social-element>
-                <mj-social-element name="google" href="https://mjml.io/">
-                  Google
-                </mj-social-element>
-                <mj-social-element name="twitter" href="https://mjml.io/">
-                  Twitter
-                </mj-social-element>
-              </mj-social>
+          <mj-section padding="34px 40px" background-color="#ffffff">
+            <mj-column padding="0px" vertical-align="middle">
+              <mj-image
+                width="296px"
+                padding="0px"
+                src="https://dummyimage.com/592x80/ff6347/fff"
+                align="left" />
             </mj-column>
           </mj-section>
-          <!-- Footer -->
         </mj-body>
       </mjml>
     </div>
@@ -188,6 +781,7 @@
           },
           container: '#gjs',
           fromElement: true,
+          cleanId: true,
 
           plugins: ['grapesjs-mjml'],
           pluginsOpts: {

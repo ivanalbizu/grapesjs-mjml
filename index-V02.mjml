@@ -1,0 +1,456 @@
+<mjml owa="desktop">
+  <mj-head>
+    <mj-breakpoint width="560px" />
+    <mj-style>
+      @media only screen and (min-width: 560px) {
+        .td-padding-x-40 td {
+          padding-left: 40px!important;
+          padding-right: 40px!important;
+        }
+        .td-padding-x-24 td {
+          padding-left: 24px!important;
+          padding-right: 24px!important;
+        }
+        .td-padding-y-0 td {
+          padding-top: 0px!important;
+          padding-bottom: 0px!important;
+        }
+      }
+    </mj-style>
+  </mj-head>
+  <mj-body background-color="#eeeeee">
+    <mj-section padding="0" background-color="#000000">
+      <mj-group>
+        <mj-column width="65%" padding="20px" vertical-align="middle">
+          <mj-image
+            width="282px"
+            padding="0px"
+            href="https://www.orange.es/index_cliente"
+            src="https://dummyimage.com/603x120/ff6347/fff" />
+        </mj-column>
+        <mj-column width="35%" padding="20px" vertical-align="middle">
+          <mj-text
+            font-weight="400"
+            font-size="15px"
+            line-height="22px"
+            font-family="Helvetica,Arial"
+            color="#ffffff"
+            align="right"
+            padding="0"
+            >29-06-2022</mj-text
+          >
+        </mj-column>
+      </mj-group>
+    </mj-section>
+
+    <!-- Digital Tools informa - 2 columns -->
+    <mj-section
+      padding="0"
+      background-color="#000000"
+      border-top="1px solid #ffffff"
+      border-bottom="1px solid #ffffff">
+      <mj-column padding="40px" vertical-align="middle" css-class="td-padding-x-40 td-padding-y-0">
+        <mj-text
+          font-weight="700"
+          font-size="18px"
+          line-height="20px"
+          font-family="Helvetica,Arial"
+          color="#ffffff"
+          padding="0px 0px 8px">
+          Digital Tools Informa
+        </mj-text>
+        <mj-text
+          font-weight="700"
+          font-size="16px"
+          line-height="18px"
+          font-family="Helvetica,Arial"
+          color="#ffffff"
+          padding="0px">
+          Como siempre, desde nuestro espacio en Confluence tienes acceso
+          a toda la información de Digital Tool.
+        </mj-text>
+      </mj-column>
+      <mj-column padding="0" vertical-align="middle">
+        <mj-image
+          width="310px"
+          padding="0"
+          src="https://dummyimage.com/310x140/800080/fff" />
+      </mj-column>
+    </mj-section>
+
+    <!-- Digital Tools informa - 1 columns -->
+    <mj-section
+      padding="0"
+      background-color="#000000">
+      <mj-column padding="24px 40px" css-class="td-padding-x-24">
+        <mj-text
+          padding="0"
+          font-weight="700"
+          font-size="18px"
+          line-height="20px"
+          font-family="Helvetica,Arial"
+          color="#ffffff">
+          Digital Tools Informa
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <!-- Section Divider-->
+    <mj-section padding="0">
+      <mj-column>
+        <mj-divider
+          padding="0"
+          border-width="10px"
+          border-style="solid"
+          border-color="#eeeeee" />
+      </mj-column>
+    </mj-section>
+
+    <!-- 2 columns: image center -->
+    <mj-section
+      padding="0"
+      background-color="#4bb4e6">
+      <mj-column width="32%" padding="0" vertical-align="middle" background-color="#4bb4e6">
+        <mj-image
+          width="200px"
+          padding="0"
+          src="https://dummyimage.com/414x414/800080/fff" />
+      </mj-column>
+      <mj-column width="68%" padding="20px 40px" vertical-align="middle" background-color="#ffffff">
+        <mj-text
+          padding="0 0 10px 0"
+          font-weight="700"
+          font-size="18px"
+          line-height="20px"
+          font-family="Helvetica,Arial"
+          color="#000000">
+          Imagen transparente alineada en el centro y fondo azul
+          <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="vertical-align:top;" width="100%">
+            <tbody>
+              <tr>
+                <td align="left" style="font-size:0px;padding:10px 0px 10px;word-break:break-word;">
+                  <p style="border-top:solid 2px #ff7900;font-size:1px;margin:0px;width:50px;">
+                  </p>
+                  <!--[if mso | IE]><table align="left" border="0" cellpadding="0" cellspacing="0" style="border-top:solid 2px #ff7900;font-size:1px;margin:0px;width:50px;" role="presentation" width="50px" ><tr><td style="height:0;line-height:0;"> &nbsp;
+</td></tr></table><![endif]-->
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </mj-text>
+        <mj-text
+          padding="0 0 10px 0"
+          font-weight="400"
+          font-size="16px"
+          line-height="18px"
+          font-family="Helvetica,Arial"
+          color="#333333">
+          <div style="font-size:16px;line-height:18px;padding-bottom:8px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit ipsum dolor sit amet, consectetur adipiscing elit.</div>
+          <div style="font-size:16px;line-height:18px;padding-bottom:8px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit ipsum dolor sit amet, consectetur adipiscing elit.</div>
+          <ul style="margin:0;padding:0;list-style-position:inside;">
+            <li style="padding:10px 0 0;">
+              <a style="color:#FF7900;font-size:16px;line-height:18px;" href="#!">
+                <span style="color:#FF7900;">Enlace</span>
+              </a>
+            </li>
+          </ul>
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <!-- Section Divider-->
+    <mj-section padding="0">
+      <mj-column>
+        <mj-divider
+          padding="0"
+          border-width="10px"
+          border-style="solid"
+          border-color="#eeeeee" />
+      </mj-column>
+    </mj-section>
+
+    <!-- 2 columns: image bottom -->
+    <mj-section
+      padding="0"
+      background-color="#4bb4e6">
+      <mj-column width="32%" padding="0" vertical-align="bottom" background-color="#4bb4e6">
+        <mj-image
+          width="200px"
+          padding="0"
+          src="https://dummyimage.com/414x414/800080/fff" />
+      </mj-column>
+      <mj-column width="68%" padding="20px 40px" vertical-align="middle" background-color="#ffffff">
+        <mj-text
+          padding="0 0 10px 0"
+          font-weight="700"
+          font-size="18px"
+          line-height="20px"
+          font-family="Helvetica,Arial"
+          color="#000000">
+          Imagen alineada abajo y fondo azul
+          <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="vertical-align:top;" width="100%">
+            <tbody>
+              <tr>
+                <td align="left" style="font-size:0px;padding:10px 0px 10px;word-break:break-word;">
+                  <p style="border-top:solid 2px #ff7900;font-size:1px;margin:0px;width:50px;">
+                  </p>
+                  <!--[if mso | IE]><table align="left" border="0" cellpadding="0" cellspacing="0" style="border-top:solid 2px #ff7900;font-size:1px;margin:0px;width:50px;" role="presentation" width="50px" ><tr><td style="height:0;line-height:0;"> &nbsp;
+</td></tr></table><![endif]-->
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </mj-text>
+        <mj-text
+          padding="0 0 10px 0"
+          font-weight="400"
+          font-size="16px"
+          line-height="18px"
+          font-family="Helvetica,Arial"
+          color="#333333">
+          <div style="font-size:16px;line-height:18px;padding-bottom:8px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit ipsum dolor sit amet, consectetur adipiscing elit.</div>
+          <div style="font-size:16px;line-height:18px;padding-bottom:8px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit ipsum dolor sit amet, consectetur adipiscing elit.</div>
+          <ul style="margin:0;padding:0;list-style-position:inside;">
+            <li style="padding:10px 0 0;">
+              <a style="color:#FF7900;font-size:16px;line-height:18px;" href="#!">
+                <span style="color:#FF7900;">Enlace</span>
+              </a>
+            </li>
+          </ul>
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <!-- Section Divider-->
+    <mj-section padding="0">
+      <mj-column>
+        <mj-divider
+          padding="0"
+          border-width="10px"
+          border-style="solid"
+          border-color="#eeeeee" />
+      </mj-column>
+    </mj-section>
+
+    <!-- 2 columns: image top -->
+    <mj-section
+      padding="0"
+      background-color="#eeeeee">
+      <mj-column width="32%" padding="0" vertical-align="top" background-color="#eeeeee">
+        <mj-image
+          width="200px"
+          padding="0"
+          src="https://dummyimage.com/414x414/800080/fff" />
+      </mj-column>
+      <mj-column width="68%" padding="20px 40px" vertical-align="middle" background-color="#ffffff">
+        <mj-text
+          padding="0 0 10px 0"
+          font-weight="700"
+          font-size="18px"
+          line-height="20px"
+          font-family="Helvetica,Arial"
+          color="#000000">
+          Imagen alineada top y fondo gris (aspecto transparente)
+          <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="vertical-align:top;" width="100%">
+            <tbody>
+              <tr>
+                <td align="left" style="font-size:0px;padding:10px 0px 10px;word-break:break-word;">
+                  <p style="border-top:solid 2px #ff7900;font-size:1px;margin:0px;width:50px;">
+                  </p>
+                  <!--[if mso | IE]><table align="left" border="0" cellpadding="0" cellspacing="0" style="border-top:solid 2px #ff7900;font-size:1px;margin:0px;width:50px;" role="presentation" width="50px" ><tr><td style="height:0;line-height:0;"> &nbsp;
+</td></tr></table><![endif]-->
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </mj-text>
+        <mj-text
+          padding="0 0 10px 0"
+          font-weight="400"
+          font-size="16px"
+          line-height="18px"
+          font-family="Helvetica,Arial"
+          color="#333333">
+          <div style="font-size:16px;line-height:18px;padding-bottom:8px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit ipsum dolor sit amet, consectetur adipiscing elit.</div>
+          <ul style="margin:0;padding:0;list-style-position:inside;">
+            <li style="padding:10px 0 0;">
+              <a style="color:#FF7900;font-size:16px;line-height:18px;" href="#!">
+                <span style="color:#FF7900;">Enlace</span>
+              </a>
+            </li>
+          </ul>
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <!-- Section Divider-->
+    <mj-section padding="0">
+      <mj-column>
+        <mj-divider
+          padding="0"
+          border-width="10px"
+          border-style="solid"
+          border-color="#eeeeee" />
+      </mj-column>
+    </mj-section>
+
+    <!-- 2 columns: image top -->
+    <mj-section
+      padding="0"
+      background-color="#eeeeee">
+      <mj-column width="32%" padding="0" vertical-align="top" background-color="#eeeeee">
+        <mj-image
+          width="200px"
+          padding="0"
+          src="https://dummyimage.com/414x414/800080/fff" />
+      </mj-column>
+      <mj-column width="68%" padding="20px 40px" vertical-align="middle" background-color="#ffffff">
+        <mj-text
+          padding="0 0 10px 0"
+          font-weight="700"
+          font-size="18px"
+          line-height="20px"
+          font-family="Helvetica,Arial"
+          color="#000000">
+          Imagen alineada top y fondo gris (aspecto transparente)
+          <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="vertical-align:top;" width="100%">
+            <tbody>
+              <tr>
+                <td align="left" style="font-size:0px;padding:10px 0px 10px;word-break:break-word;">
+                  <p style="border-top:solid 2px #ff7900;font-size:1px;margin:0px;width:50px;">
+                  </p>
+                  <!--[if mso | IE]><table align="left" border="0" cellpadding="0" cellspacing="0" style="border-top:solid 2px #ff7900;font-size:1px;margin:0px;width:50px;" role="presentation" width="50px" ><tr><td style="height:0;line-height:0;"> &nbsp;
+</td></tr></table><![endif]-->
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </mj-text>
+        <mj-text
+          padding="0 0 10px 0"
+          font-weight="400"
+          font-size="16px"
+          line-height="18px"
+          font-family="Helvetica,Arial"
+          color="#333333">
+          <div style="font-size:16px;line-height:18px;padding-bottom:8px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit ipsum dolor sit amet, consectetur adipiscing elit.</div>
+          <div style="font-size:16px;line-height:18px;padding-bottom:8px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit ipsum dolor sit amet, consectetur adipiscing elit.</div>
+          <ul style="margin:0;padding:0;list-style-position:inside;">
+            <li style="padding:10px 0 0;">
+              <a style="color:#FF7900;font-size:16px;line-height:18px;" href="#!">
+                <span style="color:#FF7900;">Enlace</span>
+              </a>
+            </li>
+          </ul>
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <!-- Section Divider-->
+    <mj-section padding="0">
+      <mj-column>
+        <mj-divider
+          padding="0"
+          border-width="10px"
+          border-style="solid"
+          border-color="#eeeeee" />
+      </mj-column>
+    </mj-section>
+
+    <!-- 2 columns: image center -->
+    <mj-section
+      padding="0"
+      background-color="#cccccc">
+      <mj-column width="32%" padding="0" vertical-align="middle" background-color="#cccccc">
+        <mj-image
+          width="200px"
+          padding="0"
+          src="https://dummyimage.com/414x414/800080/fff" />
+      </mj-column>
+      <mj-column width="68%" padding="20px 40px" vertical-align="middle" background-color="#ffffff">
+        <mj-text
+          padding="0 0 10px 0"
+          font-weight="700"
+          font-size="18px"
+          line-height="20px"
+          font-family="Helvetica,Arial"
+          color="#000000">
+          Imagen centrada transparente y fondo gris
+          <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="vertical-align:top;" width="100%">
+            <tbody>
+              <tr>
+                <td align="left" style="font-size:0px;padding:10px 0px 10px;word-break:break-word;">
+                  <p style="border-top:solid 2px #ff7900;font-size:1px;margin:0px;width:50px;">
+                  </p>
+                  <!--[if mso | IE]><table align="left" border="0" cellpadding="0" cellspacing="0" style="border-top:solid 2px #ff7900;font-size:1px;margin:0px;width:50px;" role="presentation" width="50px" ><tr><td style="height:0;line-height:0;"> &nbsp;
+</td></tr></table><![endif]-->
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </mj-text>
+        <mj-text
+          padding="0 0 10px 0"
+          font-weight="400"
+          font-size="16px"
+          line-height="18px"
+          font-family="Helvetica,Arial"
+          color="#333333">
+          <div style="font-size:16px;line-height:18px;padding-bottom:8px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+          <ul style="margin:0;padding:0 0 16px;list-style-position:inside;">
+            <li style="padding:10px 0 0;">
+              <a style="color:#FF7900;font-size:16px;line-height:18px;" href="#!">
+                <span style="color:#FF7900;">Enlace a un sitio</span>
+              </a>
+            </li>
+            <li style="padding:10px 0 0;">
+              <a style="color:#FF7900;font-size:16px;line-height:18px;" href="#!">
+                <span style="color:#FF7900;">Enlace a un sitio</span>
+              </a>
+            </li>
+          </ul>
+          <div style="font-size:16px;line-height:18px;padding-bottom:8px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+          <ul style="margin:0;padding:0;list-style-position:inside;">
+            <li style="padding:10px 0 0;">
+              <a style="color:#FF7900;font-size:16px;line-height:18px;" href="#!">
+                <span style="color:#FF7900;">Enlace a un sitio</span>
+              </a>
+            </li>
+            <li style="padding:10px 0 0;">
+              <a style="color:#FF7900;font-size:16px;line-height:18px;" href="#!">
+                <span style="color:#FF7900;">Enlace a un sitio</span>
+              </a>
+            </li>
+            <li style="padding:10px 0 0;">
+              <a style="color:#FF7900;font-size:16px;line-height:18px;" href="#!">
+                <span style="color:#FF7900;">Y este a otro sitio</span>
+              </a>
+            </li>
+          </ul>
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <!-- Section Divider-->
+    <mj-section padding="0">
+      <mj-column>
+        <mj-divider
+          padding="0"
+          border-width="10px"
+          border-style="solid"
+          border-color="#eeeeee" />
+      </mj-column>
+    </mj-section>
+
+    <!-- Footer -->
+    <mj-section padding="34px 40px" background-color="#000000">
+      <mj-column padding="0px" vertical-align="middle">
+        <mj-image
+          width="296px"
+          padding="0px"
+          src="https://dummyimage.com/592x80/ff6347/fff"
+          align="left" />
+      </mj-column>
+    </mj-section>
+  </mj-body>
+</mjml>
