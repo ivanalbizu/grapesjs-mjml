@@ -99,20 +99,24 @@ export default (editor: grapesjs.Editor, opt: RequiredPluginOptions) => {
       let code = '';
       let strAttr = '';
 
-      for (let prop in attr) {
-        const val = attr[prop];
-        const hasValue = typeof val !== 'undefined' && val !== '';
-        strAttr += hasValue ? ` ${prop}="${val}"` : '';
-      }
-
-      code += `<${tag}${strAttr}${voidTag ? '/' : ''}>` + model.get('content');
-
-      model.components().forEach((model: any) => {
-        code += model.toHTML();
-      });
-
-      if (!voidTag) {
-        code += `</${tag}>`;
+      if(tag == 'mj-style') {
+        code = `<${tag}>` + model.view.childNodes[0].textContent + `</${tag}>`;
+      } else {
+        for (let prop in attr) {
+          const val = attr[prop];
+          const hasValue = typeof val !== 'undefined' && val !== '';
+          strAttr += hasValue ? ` ${prop}="${val}"` : '';
+        }
+  
+        code += `<${tag}${strAttr}${voidTag ? '/' : ''}>` + model.get('content');
+  
+        model.components().forEach((model: any) => {
+          code += model.toHTML();
+        });
+  
+        if (!voidTag) {
+          code += `</${tag}>`;
+        }
       }
 
       return code;
