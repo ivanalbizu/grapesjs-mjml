@@ -24,35 +24,38 @@ export default (editor: grapesjs.Editor, opts: RequiredPluginOptions) => {
   const getI18nLabel = (label: string) => editor.I18n.t(`grapesjs-mjml.components.names.${label}`)
 
   addBlock('mj-1-column', {
-    category: 'Atoms',
+    category: 'Columns',
     label: getI18nLabel('oneColumn'),
     media: `<svg viewBox="0 0 24 24">
-      <path fill="currentColor" d="M2 20h20V4H2v16Zm-1 0V4a1 1 0 0 1 1-1h20a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1Z"/>
-    </svg>`,
-    content: `<mj-section>
+        <path fill="currentColor" d="M2 20h20V4H2v16Zm-1 0V4a1 1 0 0 1 1-1h20a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1Z"/>
+      </svg>`,
+    content: `
+      <mj-section>
         <mj-column><mj-text>Content 1</mj-text></mj-column>
       </mj-section>`,
   });
 
   addBlock('mj-2-columns', {
-    category: 'Atoms',
+    category: 'Columns',
     label: getI18nLabel('twoColumn'),
     media: `<svg viewBox="0 0 23 24">
-      <path fill="currentColor" d="M2 20h8V4H2v16Zm-1 0V4a1 1 0 0 1 1-1h8a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1ZM13 20h8V4h-8v16Zm-1 0V4a1 1 0 0 1 1-1h8a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1h-8a1 1 0 0 1-1-1Z"/>
-    </svg>`,
-    content: `<mj-section>
-      <mj-column><mj-text>Content 1</mj-text></mj-column>
-      <mj-column><mj-text>Content 2</mj-text></mj-column>
-    </mj-section>`,
+        <path fill="currentColor" d="M2 20h8V4H2v16Zm-1 0V4a1 1 0 0 1 1-1h8a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1ZM13 20h8V4h-8v16Zm-1 0V4a1 1 0 0 1 1-1h8a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1h-8a1 1 0 0 1-1-1Z"/>
+      </svg>`,
+    content: `
+      <mj-section>
+        <mj-column><mj-text>Content 1</mj-text></mj-column>
+        <mj-column><mj-text>Content 2</mj-text></mj-column>
+      </mj-section>`,
   });
 
   addBlock('mj-3-columns', {
-    category: 'Atoms',
+    category: 'Columns',
     label: getI18nLabel('threeColumn'),
     media: `<svg viewBox="0 0 23 24">
-      <path fill="currentColor" d="M2 20h4V4H2v16Zm-1 0V4a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1ZM17 20h4V4h-4v16Zm-1 0V4a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1ZM9.5 20h4V4h-4v16Zm-1 0V4a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1Z"/>
-    </svg>`,
-    content: `<mj-section>
+        <path fill="currentColor" d="M2 20h4V4H2v16Zm-1 0V4a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1ZM17 20h4V4h-4v16Zm-1 0V4a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1ZM9.5 20h4V4h-4v16Zm-1 0V4a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1Z"/>
+      </svg>`,
+    content: `
+      <mj-section>
         <mj-column><mj-text>Content 1</mj-text></mj-column>
         <mj-column><mj-text>Content 2</mj-text></mj-column>
         <mj-column><mj-text>Content 3</mj-text></mj-column>
@@ -63,19 +66,35 @@ export default (editor: grapesjs.Editor, opts: RequiredPluginOptions) => {
     category: 'Atoms',
     label: getI18nLabel('text'),
     media: `<svg viewBox="0 0 24 24">
-      <path fill="currentColor" d="M18.5,4L19.66,8.35L18.7,8.61C18.25,7.74 17.79,6.87 17.26,6.43C16.73,6 16.11,6 15.5,6H13V16.5C13,17 13,17.5 13.33,17.75C13.67,18 14.33,18 15,18V19H9V18C9.67,18 10.33,18 10.67,17.75C11,17.5 11,17 11,16.5V6H8.5C7.89,6 7.27,6 6.74,6.43C6.21,6.87 5.75,7.74 5.3,8.61L4.34,8.35L5.5,4H18.5Z" />
-    </svg>`,
+        <path fill="currentColor" d="M18.5,4L19.66,8.35L18.7,8.61C18.25,7.74 17.79,6.87 17.26,6.43C16.73,6 16.11,6 15.5,6H13V16.5C13,17 13,17.5 13.33,17.75C13.67,18 14.33,18 15,18V19H9V18C9.67,18 10.33,18 10.67,17.75C11,17.5 11,17 11,16.5V6H8.5C7.89,6 7.27,6 6.74,6.43C6.21,6.87 5.75,7.74 5.3,8.61L4.34,8.35L5.5,4H18.5Z" />
+      </svg>`,
     content: '<mj-text>Insert text here</mj-text>',
     activate: true,
   });
 
   addBlock('mj-button', {
-    category: 'Atoms',
+    category: 'Buttons',
     label: getI18nLabel('button'),
+    media: `
+      <svg viewBox="0 0 24 24">
+        <path fill="currentColor" d="M20 20.5C20 21.3 19.3 22 18.5 22H13C12.6 22 12.3 21.9 12 21.6L8 17.4L8.7 16.6C8.9 16.4 9.2 16.3 9.5 16.3H9.7L12 18V9C12 8.4 12.4 8 13 8S14 8.4 14 9V13.5L15.2 13.6L19.1 15.8C19.6 16 20 16.6 20 17.1V20.5M20 2H4C2.9 2 2 2.9 2 4V12C2 13.1 2.9 14 4 14H8V12H4V4H20V12H18V14H20C21.1 14 22 13.1 22 12V4C22 2.9 21.1 2 20 2Z" />
+      </svg>`,
+    content: `
+      <mj-button font-family="Helvetica,Arial,sans-serif" font-weight="400" font-size="16px" line-height="18px" background-color="#FF7900" color="#ffffff" padding="5px 0" inner-padding="5px 20px" align="left">
+        Enlace a un sitio
+      </mj-button>`,
+  });
+
+  addBlock('mj-button-link', {
+    category: 'Buttons',
+    label: getI18nLabel('buttonLink'),
     media: `<svg viewBox="0 0 24 24">
         <path fill="currentColor" d="M20 20.5C20 21.3 19.3 22 18.5 22H13C12.6 22 12.3 21.9 12 21.6L8 17.4L8.7 16.6C8.9 16.4 9.2 16.3 9.5 16.3H9.7L12 18V9C12 8.4 12.4 8 13 8S14 8.4 14 9V13.5L15.2 13.6L19.1 15.8C19.6 16 20 16.6 20 17.1V20.5M20 2H4C2.9 2 2 2.9 2 4V12C2 13.1 2.9 14 4 14H8V12H4V4H20V12H18V14H20C21.1 14 22 13.1 22 12V4C22 2.9 21.1 2 20 2Z" />
-    </svg>`,
-    content: '<mj-button>Button</mj-button>',
+      </svg>`,
+    content: `
+      <mj-button font-family="Helvetica,Arial" font-weight="400" font-size="16px" line-height="18px" background-color="transparent" color="#FF7900" padding="0 0 10px" inner-padding="0" align="left">
+        &bull;&nbsp; Enlace a un sitio
+      </mj-button>`,
   });
 
   addBlock('mj-image', {
@@ -88,20 +107,38 @@ export default (editor: grapesjs.Editor, opts: RequiredPluginOptions) => {
     activate: true,
   });
 
-  addBlock('mj-divider', {
-    category: 'Atoms',
-    label: getI18nLabel('divider'),
+  addBlock('mj-divider-outer', {
+    category: 'Divider',
+    label: getI18nLabel('dividerOuter'),
     media: `<svg viewBox="0 0 24 24">
         <path fill="currentColor" d="M21 18H2V20H21V18M19 10V14H4V10H19M20 8H3C2.45 8 2 8.45 2 9V15C2 15.55 2.45 16 3 16H20C20.55 16 21 15.55 21 15V9C21 8.45 20.55 8 20 8M21 4H2V6H21V4Z" />
-    </svg>`,
-    content: '<mj-divider/>',
+      </svg>`,
+    content: `
+      <mj-section padding="0">
+        <mj-column padding="0">
+          <mj-spacer height="10px" container-background-color="#eeeeee" />
+        </mj-column>
+      </mj-section>
+    `,
+  });
+
+  addBlock('mj-divider-inner', {
+    category: 'Divider',
+    label: getI18nLabel('dividerInner'),
+    media: `<svg viewBox="0 0 24 24">
+        <path fill="currentColor" d="M21 18H2V20H21V18M19 10V14H4V10H19M20 8H3C2.45 8 2 8.45 2 9V15C2 15.55 2.45 16 3 16H20C20.55 16 21 15.55 21 15V9C21 8.45 20.55 8 20 8M21 4H2V6H21V4Z" />
+      </svg>`,
+    content: `
+      <mj-divider width="50px" padding="10px 0" align="left" border-width="1.5px" border-style="solid" border-color="#ff7900" />
+    `,
   });
 
   addBlock('mj-social-group', {
     category: 'Atoms',
     label: getI18nLabel('socialGroup'),
     media: socialIcon,
-    content: `<mj-social font-size="12px" icon-size="24px" border-radius="12px" mode="horizontal">
+    content: `
+      <mj-social font-size="12px" icon-size="24px" border-radius="12px" mode="horizontal">
         <mj-social-element name="facebook"></mj-social-element>
         <mj-social-element name="google"></mj-social-element>
         <mj-social-element name="twitter"></mj-social-element>
@@ -120,7 +157,7 @@ export default (editor: grapesjs.Editor, opts: RequiredPluginOptions) => {
     label: getI18nLabel('spacer'),
     media: `<svg viewBox="0 0 24 24">
         <path fill="currentColor" d="M8,18H11V15H2V13H22V15H13V18H16L12,22L8,18M12,2L8,6H11V9H2V11H22V9H13V6H16L12,2Z" />
-    </svg>`,
+      </svg>`,
     content: '<mj-spacer/>',
   });
 
@@ -129,13 +166,14 @@ export default (editor: grapesjs.Editor, opts: RequiredPluginOptions) => {
     label: getI18nLabel('navBar'),
     media: `<svg viewBox="0 0 24 24">
         <path fill="currentColor" d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z" />
-    </svg>`,
-    content: `<mj-navbar>
-      <mj-navbar-link>Getting started</mj-navbar-link>
-      <mj-navbar-link>Try it live</mj-navbar-link>
-      <mj-navbar-link>Templates</mj-navbar-link>
-      <mj-navbar-link>Components</mj-navbar-link>
-    </mj-navbar>`,
+      </svg>`,
+    content: `
+      <mj-navbar>
+        <mj-navbar-link>Getting started</mj-navbar-link>
+        <mj-navbar-link>Try it live</mj-navbar-link>
+        <mj-navbar-link>Templates</mj-navbar-link>
+        <mj-navbar-link>Components</mj-navbar-link>
+      </mj-navbar>`,
   });
 
   addBlock('mj-navbar-link', {
@@ -143,7 +181,7 @@ export default (editor: grapesjs.Editor, opts: RequiredPluginOptions) => {
     label: getI18nLabel('navLink'),
     media: `<svg viewBox="0 0 24 24">
         <path fill="currentColor" d="M21,15.61L19.59,17L14.58,12L19.59,7L21,8.39L17.44,12L21,15.61M3,6H16V8H3V6M3,13V11H13V13H3M3,18V16H16V18H3Z" />
-    </svg>`,
+      </svg>`,
     content: `<mj-navbar-link>Link</mj-navbar-link>`,
   });
 
@@ -152,15 +190,16 @@ export default (editor: grapesjs.Editor, opts: RequiredPluginOptions) => {
     label: getI18nLabel('hero'),
     media: `<svg viewBox="0 0 24 24">
         <path fill="currentColor" d="M20,20H4A2,2 0 0,1 2,18V6A2,2 0 0,1 4,4H20A2,2 0 0,1 22,6V18A2,2 0 0,1 20,20M4,6V18H20V6H4M6,9H18V11H6V9M6,13H16V15H6V13Z" />
-    </svg>`,
-    content: `<mj-hero mode="fixed-height" height="469px" background-width="600px" background-height="469px" background-url="https://cloud.githubusercontent.com/assets/1830348/15354890/1442159a-1cf0-11e6-92b1-b861dadf1750.jpg" background-color="#2a3448" padding="100px 0px">
-      <mj-text padding="20px" color="#ffffff" font-family="Helvetica" align="center" font-size="45px" line-height="45px" font-weight="900">
-        GO TO SPACE
-      </mj-text>
-      <mj-button href="https://mjml.io/" align="center">
-        ORDER YOUR TICKET NOW
-      </mj-button>
-    </mj-hero>`,
+      </svg>`,
+    content: `
+      <mj-hero mode="fixed-height" height="469px" background-width="600px" background-height="469px" background-url="https://cloud.githubusercontent.com/assets/1830348/15354890/1442159a-1cf0-11e6-92b1-b861dadf1750.jpg" background-color="#2a3448" padding="100px 0px">
+        <mj-text padding="20px" color="#ffffff" font-family="Helvetica" align="center" font-size="45px" line-height="45px" font-weight="900">
+          GO TO SPACE
+        </mj-text>
+        <mj-button href="https://mjml.io/" align="center">
+          ORDER YOUR TICKET NOW
+        </mj-button>
+      </mj-hero>`,
   });
 
   addBlock('mj-wrapper', {
@@ -168,29 +207,30 @@ export default (editor: grapesjs.Editor, opts: RequiredPluginOptions) => {
     label: getI18nLabel('wrapper'),
     media: `<svg viewBox="0 0 24 24">
         <path fill="currentColor" d="M18 2H6C4.89 2 4 2.9 4 4V20C4 21.11 4.89 22 6 22H18C19.11 22 20 21.11 20 20V4C20 2.9 19.11 2 18 2M18 20H6V16H18V20M18 8H6V4H18V8Z" />
-    </svg>`,
-    content: `<mj-wrapper border="1px solid #000000" padding="50px 30px">
-      <mj-section border-top="1px solid #aaaaaa" border-left="1px solid #aaaaaa" border-right="1px solid #aaaaaa" padding="20px">
-        <mj-column>
-          <mj-image padding="0" src="${imagePlaceholderSrc}" />
-        </mj-column>
-      </mj-section>
-      <mj-section border-left="1px solid #aaaaaa" border-right="1px solid #aaaaaa" padding="20px" border-bottom="1px solid #aaaaaa">
-        <mj-column border="1px solid #dddddd">
-          <mj-text padding="20px"> First line of text </mj-text>
-          <mj-divider border-width="1px" border-style="dashed" border-color="lightgrey" padding="0 20px" />
-          <mj-text padding="20px"> Second line of text </mj-text>
-        </mj-column>
-      </mj-section>
-    </mj-wrapper>`,
+      </svg>`,
+    content: `
+      <mj-wrapper border="1px solid #000000" padding="50px 30px">
+        <mj-section border-top="1px solid #aaaaaa" border-left="1px solid #aaaaaa" border-right="1px solid #aaaaaa" padding="20px">
+          <mj-column>
+            <mj-image padding="0" src="${imagePlaceholderSrc}" />
+          </mj-column>
+        </mj-section>
+        <mj-section border-left="1px solid #aaaaaa" border-right="1px solid #aaaaaa" padding="20px" border-bottom="1px solid #aaaaaa">
+          <mj-column border="1px solid #dddddd">
+            <mj-text padding="20px"> First line of text </mj-text>
+            <mj-divider border-width="1px" border-style="dashed" border-color="lightgrey" padding="0 20px" />
+            <mj-text padding="20px"> Second line of text </mj-text>
+          </mj-column>
+        </mj-section>
+      </mj-wrapper>`,
   });
 
   addBlock('mj-group', {
     category: 'Atoms',
     label: getI18nLabel('group'),
     media: `<svg viewBox="0 0 24 24">
-      <path fill="currentColor" d="M3 3h8v2H3V3m10 0h8v2h-8V3M3 7h8v2H3V7m10 0h8v2h-8V7M3 11h8v2H3v-2m10 0h8v2h-8v-2M3 15h8v2H3v-2m10 0h8v2h-8v-2M3 19h8v2H3v-2m10 0h8v2h-8v-2Z"/>
-    </svg>`,
+        <path fill="currentColor" d="M3 3h8v2H3V3m10 0h8v2h-8V3M3 7h8v2H3V7m10 0h8v2h-8V7M3 11h8v2H3v-2m10 0h8v2h-8v-2M3 15h8v2H3v-2m10 0h8v2h-8v-2M3 19h8v2H3v-2m10 0h8v2h-8v-2Z"/>
+      </svg>`,
     content: `
       <mj-section>
         <mj-group>
@@ -209,8 +249,7 @@ export default (editor: grapesjs.Editor, opts: RequiredPluginOptions) => {
             </mj-text>
           </mj-column>
         </mj-group>
-      </mj-section>
-    `,
+      </mj-section>`,
   });
 
   addBlock('mj-raw', {
@@ -218,17 +257,18 @@ export default (editor: grapesjs.Editor, opts: RequiredPluginOptions) => {
     label: getI18nLabel('raw'),
     media: `<svg viewBox="0 0 24 24">
         <path fill="currentColor" d="M12,17.56L16.07,16.43L16.62,10.33H9.38L9.2,8.3H16.8L17,6.31H7L7.56,12.32H14.45L14.22,14.9L12,15.5L9.78,14.9L9.64,13.24H7.64L7.93,16.43L12,17.56M4.07,3H19.93L18.5,19.2L12,21L5.5,19.2L4.07,3Z" />
-    </svg>`,
-    content: `<mj-raw>
-      <div class="container">
-        <img class="item" src="https://source.unsplash.com/random/200x141" alt="Example image">
-        <img class="item" src="https://source.unsplash.com/random/200x142" alt="Example image">
-        <img class="item" src="https://source.unsplash.com/random/200x143" alt="Example image">
-        <img class="item" src="https://source.unsplash.com/random/200x144" alt="Example image">
-        <img class="item" src="https://source.unsplash.com/random/200x145" alt="Example image">
-        <img class="item" src="https://source.unsplash.com/random/200x146" alt="Example image">
-      </div>
-    </mj-raw>`,
+      </svg>`,
+    content: `
+      <mj-raw>
+        <div class="container">
+          <img class="item" src="https://source.unsplash.com/random/200x141" alt="Example image">
+          <img class="item" src="https://source.unsplash.com/random/200x142" alt="Example image">
+          <img class="item" src="https://source.unsplash.com/random/200x143" alt="Example image">
+          <img class="item" src="https://source.unsplash.com/random/200x144" alt="Example image">
+          <img class="item" src="https://source.unsplash.com/random/200x145" alt="Example image">
+          <img class="item" src="https://source.unsplash.com/random/200x146" alt="Example image">
+        </div>
+      </mj-raw>`,
   });
 
   addBlock('digital-tools-2', {
@@ -236,38 +276,39 @@ export default (editor: grapesjs.Editor, opts: RequiredPluginOptions) => {
     label: 'Digital 2 cols',
     media: `<svg viewBox="0 0 24 24">
         <path fill="currentColor" d="M12,17.56L16.07,16.43L16.62,10.33H9.38L9.2,8.3H16.8L17,6.31H7L7.56,12.32H14.45L14.22,14.9L12,15.5L9.78,14.9L9.64,13.24H7.64L7.93,16.43L12,17.56M4.07,3H19.93L18.5,19.2L12,21L5.5,19.2L4.07,3Z" />
-    </svg>`,
-    content: `<mj-section
-      padding="0"
-      background-color="#000000"
-      border-top="1px solid #ffffff"
-      border-bottom="1px solid #ffffff">
-      <mj-column padding="0 20px" vertical-align="middle">
-        <mj-text
-          font-weight="700"
-          font-size="18px"
-          line-height="20px"
-          font-family="Helvetica,Arial"
-          color="#ffffff">
-          Digital Tools Informa
-        </mj-text>
-        <mj-text
-          font-weight="700"
-          font-size="16px"
-          line-height="18px"
-          font-family="Helvetica,Arial"
-          color="#ffffff">
-          Como siempre, desde nuestro espacio en Confluence tienes acceso
-          a toda la información de Digital Tool.
-        </mj-text>
-      </mj-column>
-      <mj-column padding="0" vertical-align="middle">
-        <mj-image
-          width="310px"
-          padding="0"
-          src="https://dummyimage.com/310x140/800080/fff" />
-      </mj-column>
-    </mj-section>`,
+      </svg>`,
+    content: `
+      <mj-section
+        padding="0"
+        background-color="#000000"
+        border-top="1px solid #ffffff"
+        border-bottom="1px solid #ffffff">
+        <mj-column padding="0 20px" vertical-align="middle">
+          <mj-text
+            font-weight="700"
+            font-size="18px"
+            line-height="20px"
+            font-family="Helvetica,Arial"
+            color="#ffffff">
+            Digital Tools Informa
+          </mj-text>
+          <mj-text
+            font-weight="700"
+            font-size="16px"
+            line-height="18px"
+            font-family="Helvetica,Arial"
+            color="#ffffff">
+            Como siempre, desde nuestro espacio en Confluence tienes acceso
+            a toda la información de Digital Tool.
+          </mj-text>
+        </mj-column>
+        <mj-column padding="0" vertical-align="middle">
+          <mj-image
+            width="310px"
+            padding="0"
+            src="https://dummyimage.com/310x140/800080/fff" />
+        </mj-column>
+      </mj-section>`,
   });
 
 };
