@@ -7,27 +7,33 @@
           padding-left: 40px!important;
           padding-right: 40px!important;
         }
-        .td-padding-x-24 > table > tbody > tr > td {
+        .td-padding-x-24>table>tbody>tr>td {
           padding-left: 20px!important;
           padding-right: 20px!important;
         }
-        .td-padding-x-0 > table > tbody > tr > td {
+        .td-padding-x-0>table>tbody>tr>td {
           padding-left: 0px!important;
           padding-right: 0px!important;
         }
-        .td-padding-top-24 > table > tbody > tr > td {
-          padding-top: 20px!important;
-        }
-        .td-padding-top-40 > table > tbody > tr > td {
+        .td-padding-top-40>table>tbody>tr>td {
           padding-top: 40px!important;
         }
-        .td-padding-bottom-24 > table > tbody > tr > td {
-          padding-bottom: 20px!important;
+        .td-padding-top-24>table>tbody>tr>td {
+          padding-top: 20px!important;
         }
-        .td-padding-bottom-40 > table > tbody > tr > td {
+        .td-padding-top-0>table>tbody>tr>td {
+          padding-top: 0px!important;
+        }
+        .td-padding-bottom-40>table>tbody>tr>td {
           padding-bottom: 40px!important;
         }
-        .td-bg-white > table > tbody > tr > td {
+        .td-padding-bottom-24>table>tbody>tr>td {
+          padding-bottom: 20px!important;
+        }
+        .td-padding-bottom-0>table>tbody>tr>td {
+          padding-bottom: 0px!important;
+        }
+        .td-bg-white>table>tbody>tr>td {
           background-color: #fff!important;
         }
       }
