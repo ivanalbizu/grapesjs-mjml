@@ -231,4 +231,43 @@ export default (editor: grapesjs.Editor, opts: RequiredPluginOptions) => {
     </mj-raw>`,
   });
 
+  addBlock('digital-tools-2', {
+    category: 'Organisms',
+    label: 'Digital 2 cols',
+    media: `<svg viewBox="0 0 24 24">
+        <path fill="currentColor" d="M12,17.56L16.07,16.43L16.62,10.33H9.38L9.2,8.3H16.8L17,6.31H7L7.56,12.32H14.45L14.22,14.9L12,15.5L9.78,14.9L9.64,13.24H7.64L7.93,16.43L12,17.56M4.07,3H19.93L18.5,19.2L12,21L5.5,19.2L4.07,3Z" />
+    </svg>`,
+    content: `<mj-section
+      padding="0"
+      background-color="#000000"
+      border-top="1px solid #ffffff"
+      border-bottom="1px solid #ffffff">
+      <mj-column padding="0 20px" vertical-align="middle">
+        <mj-text
+          font-weight="700"
+          font-size="18px"
+          line-height="20px"
+          font-family="Helvetica,Arial"
+          color="#ffffff">
+          Digital Tools Informa
+        </mj-text>
+        <mj-text
+          font-weight="700"
+          font-size="16px"
+          line-height="18px"
+          font-family="Helvetica,Arial"
+          color="#ffffff">
+          Como siempre, desde nuestro espacio en Confluence tienes acceso
+          a toda la información de Digital Tool.
+        </mj-text>
+      </mj-column>
+      <mj-column padding="0" vertical-align="middle">
+        <mj-image
+          width="310px"
+          padding="0"
+          src="https://dummyimage.com/310x140/800080/fff" />
+      </mj-column>
+    </mj-section>`,
+  });
+
 };

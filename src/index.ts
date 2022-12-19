@@ -124,7 +124,7 @@ const plugin: grapesjs.Plugin<PluginOptions> = (editor, opt = {}) => {
   const opts: RequiredPluginOptions = {
     blocks: [
       'mj-1-column', 'mj-2-columns', 'mj-3-columns', 'mj-text', 'mj-button', 'mj-image', 'mj-divider', 'mj-social-group',
-      'mj-social-element', 'mj-spacer', 'mj-navbar', 'mj-navbar-link', 'mj-hero', 'mj-wrapper', 'mj-group', 'mj-raw'
+      'mj-social-element', 'mj-spacer', 'mj-wrapper', 'mj-group', 'mj-raw', 'digital-tools-2'
     ],
     block: () => ({}),
     codeViewerTheme: 'hopscotch',
