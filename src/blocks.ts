@@ -203,37 +203,57 @@ export default (editor: grapesjs.Editor, opts: RequiredPluginOptions) => {
   });
 
   addBlock('mj-wrapper', {
-    category: 'Atoms',
+    category: 'Columns',
     label: getI18nLabel('wrapper'),
     media: `<svg viewBox="0 0 24 24">
         <path fill="currentColor" d="M18 2H6C4.89 2 4 2.9 4 4V20C4 21.11 4.89 22 6 22H18C19.11 22 20 21.11 20 20V4C20 2.9 19.11 2 18 2M18 20H6V16H18V20M18 8H6V4H18V8Z" />
       </svg>`,
     content: `
-      <mj-wrapper border="1px solid #000000" padding="50px 30px">
-        <mj-section border-top="1px solid #aaaaaa" border-left="1px solid #aaaaaa" border-right="1px solid #aaaaaa" padding="20px">
+      <mj-wrapper border="1px solid #000000" padding="10px 30px">
+        <mj-section border-top="1px solid #aaaaaa" border-left="1px solid #aaaaaa" border-right="1px solid #aaaaaa" padding="10px 20px">
           <mj-column>
             <mj-image padding="0" src="${imagePlaceholderSrc}" />
           </mj-column>
         </mj-section>
-        <mj-section border-left="1px solid #aaaaaa" border-right="1px solid #aaaaaa" padding="20px" border-bottom="1px solid #aaaaaa">
+        <mj-section border-left="1px solid #aaaaaa" border-right="1px solid #aaaaaa" padding="10px 20px" border-bottom="1px solid #aaaaaa">
           <mj-column border="1px solid #dddddd">
-            <mj-text padding="20px"> First line of text </mj-text>
-            <mj-divider border-width="1px" border-style="dashed" border-color="lightgrey" padding="0 20px" />
-            <mj-text padding="20px"> Second line of text </mj-text>
+            <mj-text padding="20px">First line of text</mj-text>
           </mj-column>
         </mj-section>
       </mj-wrapper>`,
   });
 
-  addBlock('mj-group', {
-    category: 'Atoms',
-    label: getI18nLabel('group'),
-    media: `<svg viewBox="0 0 24 24">
-        <path fill="currentColor" d="M3 3h8v2H3V3m10 0h8v2h-8V3M3 7h8v2H3V7m10 0h8v2h-8V7M3 11h8v2H3v-2m10 0h8v2h-8v-2M3 15h8v2H3v-2m10 0h8v2h-8v-2M3 19h8v2H3v-2m10 0h8v2h-8v-2Z"/>
+  addBlock('mj-group-two-columns', {
+    category: 'Columns',
+    label: getI18nLabel('groupTwoColumn'),
+    media: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+        <path fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="1" d="M12 4v16m-8 0h16a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v14a1 1 0 0 0 1 1z"/>
       </svg>`,
     content: `
       <mj-section>
         <mj-group>
+          <mj-column>
+            <mj-image width="137px" height="185px" padding="0" src="https://mjml.io/assets/img/easy-and-quick.png" />
+          </mj-column>
+          <mj-column>
+            <mj-image width="166px" height="185px" padding="0" src="https://mjml.io/assets/img/responsive.png" />
+          </mj-column>
+        </mj-group>
+      </mj-section>`,
+  });
+
+  addBlock('mj-group-three-columns', {
+    category: 'Columns',
+    label: getI18nLabel('groupThreeColumn'),
+    media: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+        <path fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="1" d="M9 4v16m6-16v16M4 20h16a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v14a1 1 0 0 0 1 1z"/>
+      </svg>`,
+    content: `
+      <mj-section>
+        <mj-group>
+          <mj-column>
+            <mj-image width="137px" height="185px" padding="0" src="https://mjml.io/assets/img/easy-and-quick.png" />
+          </mj-column>
           <mj-column>
             <mj-image width="137px" height="185px" padding="0" src="https://mjml.io/assets/img/easy-and-quick.png" />
           </mj-column>
