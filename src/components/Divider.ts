@@ -22,8 +22,8 @@ export default (editor: grapesjs.Editor, { coreMjmlModel, coreMjmlView }: any) =
           'border-color': '#000000',
           'padding-top': '10px',
           'padding-bottom': '10px',
-          'padding-right': '25px',
-          'padding-left': '25px',
+          'padding-right': '0px',
+          'padding-left': '0px',
         },
         stylable: [
           'padding', 'padding-top', 'padding-left', 'padding-right', 'padding-bottom',
