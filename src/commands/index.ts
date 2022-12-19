@@ -19,12 +19,12 @@ export default (editor: grapesjs.Editor, opts: RequiredPluginOptions) => {
   const cmdOpenExport = opts.overwriteExport ? 'export-template' : cmdExportMjml;
 
   Commands.add(cmdGetMjml, () => {
-      return `${opts.preMjml}${editor.getHtml().trim()}${opts.postMjml}`;
+    return `${opts.preMjml}${editor.getHtml().replaceAll(new RegExp(/ id="([^"]+)"/g),'')}${opts.postMjml}`;
   });
 
   Commands.add(cmdGetMjmlToHtml, (ed, _, opt) => {
-      const mjml = Commands.run(cmdGetMjml);
-      return mjmlConvert(mjml, opts.fonts, opt);
+    const mjml = Commands.run(cmdGetMjml);
+    return mjmlConvert(mjml, opts.fonts, opt);
   });
 
   openExportMjml(editor, opts, cmdOpenExport);
@@ -43,12 +43,6 @@ export default (editor: grapesjs.Editor, opts: RequiredPluginOptions) => {
   Commands.add(cmdDeviceMobile, {
     run: ed => ed.setDevice('Mobile portrait'),
     stop: () => {},
-  });
-
-  Commands.add('copy', (ed, _, opt) => {
-    const mjml = Commands.run(cmdGetMjmlToHtml);
-    console.log(mjml);
-    //return mjmlConvert(mjml, opts.fonts, opt);
   });
 
 };
