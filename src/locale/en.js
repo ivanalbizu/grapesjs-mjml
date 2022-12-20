@@ -12,7 +12,7 @@ export default {
         email: 'Send email'
       },
       import: {
-        title: 'Import MJML',
+        title: 'Import MJML: important, use this &lt;mjml owa="desktop"&gt;',
         button: 'Import',
         label: '',
       },

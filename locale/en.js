@@ -18,7 +18,7 @@ var _default = {
         email: 'Send email'
       },
       import: {
-        title: 'Import MJML',
+        title: 'Import MJML: important, use this &lt;mjml owa="desktop"&gt;',
         button: 'Import',
         label: ''
       },
@@ -45,12 +45,15 @@ var _default = {
       names: {
         body: 'Body',
         button: 'Button',
+        buttonLink: 'Button Link',
         column: 'Column',
         oneColumn: '1 Column',
         twoColumn: '2 Columns',
         threeColumn: '3 Columns',
-        divider: 'Divider',
-        group: 'Group',
+        dividerOuter: 'Outer Divider',
+        dividerInner: 'Inner Divider',
+        groupTwoColumn: 'Group 2 columns',
+        groupThreeColumn: 'Group 3 columns',
         hero: 'Hero',
         image: 'Image',
         navBar: 'Navbar',

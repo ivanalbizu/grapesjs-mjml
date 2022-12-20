@@ -210,7 +210,7 @@ export default (editor: grapesjs.Editor, opt: RequiredPluginOptions) => {
       const htmlOutput = mjmlConvert(mjml, opt.fonts);
       let html = htmlOutput.html;
       html = html.replace(/<body(.*)>/, '<body>');
-      let start = html.indexOf('<body>') + 6;
+      let start = html.indexOf('<body>') + 20;// this is for owa -> <mjml owa="desktop">
       let end = html.indexOf('</body>');
       html = html.substring(start, end).trim();
       sandboxEl.innerHTML = html;
