@@ -74,7 +74,7 @@
         <mj-image
           width="310px"
           padding="0"
-          src="https://dummyimage.com/310x140/800080/fff" />
+          src="https://dummyimage.com/310x140/ff7900/fff" />
       </mj-column>
     </mj-section>
 
@@ -114,7 +114,7 @@
         <mj-image
           width="200px"
           padding="0"
-          src="https://dummyimage.com/414x414/800080/fff" />
+          src="https://dummyimage.com/414x414/ff7900/fff" />
       </mj-column>
       <mj-column width="68%" padding="20px 40px" vertical-align="middle" background-color="#ffffff">
         <mj-text
@@ -177,7 +177,7 @@
         <mj-image
           width="200px"
           padding="0"
-          src="https://dummyimage.com/414x414/800080/fff" />
+          src="https://dummyimage.com/414x414/ff7900/fff" />
       </mj-column>
       <mj-column width="68%" padding="20px 40px" vertical-align="middle" background-color="#ffffff">
         <mj-text
@@ -240,7 +240,7 @@
         <mj-image
           width="200px"
           padding="0"
-          src="https://dummyimage.com/414x414/800080/fff" />
+          src="https://dummyimage.com/414x414/ff7900/fff" />
       </mj-column>
       <mj-column width="68%" padding="20px 40px" vertical-align="middle" background-color="#ffffff">
         <mj-text
@@ -302,7 +302,7 @@
         <mj-image
           width="200px"
           padding="0"
-          src="https://dummyimage.com/414x414/800080/fff" />
+          src="https://dummyimage.com/414x414/ff7900/fff" />
       </mj-column>
       <mj-column width="68%" padding="20px 40px" vertical-align="middle" background-color="#ffffff">
         <mj-text
@@ -365,7 +365,7 @@
         <mj-image
           width="200px"
           padding="0"
-          src="https://dummyimage.com/414x414/800080/fff" />
+          src="https://dummyimage.com/414x414/ff7900/fff" />
       </mj-column>
       <mj-column width="68%" padding="20px 40px" vertical-align="middle" background-color="#ffffff">
         <mj-text
