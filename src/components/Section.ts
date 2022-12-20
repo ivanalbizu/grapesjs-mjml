@@ -21,8 +21,8 @@ export default (editor: grapesjs.Editor, { coreMjmlModel, coreMjmlView }: any) =
         'style-default': {
           'padding-left': '0px',
           'padding-right': '0px',
-          'padding-top': '10px',
-          'padding-bottom': '10px',
+          'padding-top': '0',
+          'padding-bottom': '0',
           'text-align': 'center',
         },
         stylable: [
