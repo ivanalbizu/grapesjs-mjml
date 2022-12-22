@@ -10,6 +10,10 @@ export default (
 ) => {
   const config = editor.getConfig();
   const pfx = config.stylePrefix || '';
+  let markupEmail = null;
+  let markupSubject = null;
+  let markupHtml = null;
+  let formData = null;
 
   const getI18nLabel = (label: string) =>
     editor.I18n.t(`grapesjs-mjml.panels.email.${label}`);
@@ -17,17 +21,60 @@ export default (
   editor.Commands.add(cmdId, {
     onSend() {
       const data = {};
-      const formData = document.querySelectorAll('#form-data [name]');
+
+      // esta data es de ejmplo, construir según interese
+      const response = {
+        email: {
+          status: 'ko',
+          message: 'Campo email incorrecto'
+        },
+        subject: {
+          status: 'ko',
+          message: 'Campo subject incorrecto'
+        }
+      }
+      formData = document.querySelectorAll('#form-data [name]');
       formData.forEach((el, index) => {
         data[formData[index].name] = el.value;
       });
-      console.log('data build: ', data);
-
+      console.log(data);
+      
       if (typeof sendEmail === 'function') {
         sendEmail(data);
       }
 
-      editor.Modal.close();
+      // se obtienen datos del servidor
+      let statusEmail = response?.email?.status === 'ko';
+      let statusSubject = response?.subject?.status === 'ko';
+
+      // si algo fue mal, mostramos los errores y el input en rojo
+      if (statusEmail || statusSubject) {
+        if (statusEmail) {
+          markupEmail.classList.add('has-error');
+          const emailMessage = markupEmail.querySelector('#emailMessage');
+          emailMessage.innerHTML = response?.email?.message
+        }
+        if (statusSubject) {
+          markupSubject.classList.add('has-error');
+          const emailSubject = markupSubject.querySelector('#emailSubject');
+          emailSubject.innerHTML = response?.subject?.message
+        }
+      // si todo fue bien, cerramos modal
+      } else {
+        let toast = document.querySelector("#toast");
+        toast?.classList.add('show');
+        toast?.innerHTML = 'Texto metido desde JavaScript';
+
+        setTimeout(function() {
+          toast?.classList.remove('show');
+          toast.className = toast.className.replace("show", "");
+        }, 5000);
+
+        formData.forEach((el) => {
+          el.value = '';
+        });
+        editor.Modal.close();
+      }
     },
 
     elFactory(type, attributes, ...children) {
@@ -52,51 +99,64 @@ export default (
       } else {
         const el = document.createElement('div');
         el.id = 'form-data';
-  
+
         const btnEl = document.createElement('button');
         btnEl.innerHTML = getI18nLabel('button');
         btnEl.className = `${pfx}btn-prim ${pfx}btn-import`;
         btnEl.onclick = () => this.onSend();
-  
-        const markupEmail = this.elFactory(
+
+        markupEmail = this.elFactory(
           'div',
           { class: 'input-group' },
           this.elFactory(
             'label',
             {
-              for: 'email',
+              for: 'email'
             },
             getI18nLabel('inputEmail.label')
           ),
           this.elFactory('input', {
             id: 'email',
             name: 'email',
-            placeholder: getI18nLabel('inputEmail.placeholder'),
+            placeholder: getI18nLabel('inputEmail.placeholder')
+          }),
+          this.elFactory('div', {
+            id: 'emailMessage',
+            class: 'ko'
           })
         );
-        const markupSubject = this.elFactory(
+
+        markupSubject = this.elFactory(
           'div',
           { class: 'input-group' },
           this.elFactory(
             'label',
             {
-              for: 'subject',
+              for: 'subject'
             },
             getI18nLabel('inputSubject.label')
           ),
           this.elFactory('input', {
             id: 'subject',
             name: 'subject',
-            placeholder: getI18nLabel('inputSubject.placeholder'),
+            placeholder: getI18nLabel('inputSubject.placeholder')
+          }),
+          this.elFactory('div', {
+            id: 'emailSubject',
+            class: 'ko'
           })
         );
-        const markupHtml = this.elFactory(
+
+        markupHtml = this.elFactory(
           'div',
-          { class: 'input-group' },
+          {
+            class: 'input-group',
+            style: 'display:none;'
+          },
           this.elFactory(
             'label',
             {
-              for: 'inputHtml',
+              for: 'inputHtml'
             },
             getI18nLabel('inputHtml.label')
           ),
@@ -106,7 +166,7 @@ export default (
               id: 'inputHtml',
               name: 'inputHtml',
               rows: 5,
-              disabled: true,
+              disabled: true
             },
             editor.Commands.run(cmdGetMjmlToHtml).html.trim()
           )

@@ -32,9 +32,70 @@
       font-size: 14px;
     }
 
+    .input-group .ko {
+      font-size: 11px;
+      font-style: italic;
+      color: #dc3c14;
+    }
+
     .input-group input,
     .input-group textarea {
       padding: 6px 4px;
+      border: 2px solid transparent;
+    }
+
+    .input-group.has-error input,
+    .input-group.has-error textarea {
+      border-color: #dc3c14;
+    }
+
+    .toast {
+      visibility: hidden;
+      min-width: 250px;
+      margin-left: -125px;
+      background-color: #32C832;
+      color: #fff;
+      text-align: center;
+      border-radius: 2px;
+      padding: 16px;
+      position: fixed;
+      z-index: 3;
+      left: 50%;
+      bottom: 30px;
+      font-size: 17px;
+      font-family: Helvetica, Arial, sans-serif;
+      outline: 1px solid #fff;
+      outline-offset: -3px;
+      filter: drop-shadow(0px 0px 9px rgba(0, 0, 0, .5));
+    }
+
+    .toast.show {
+      visibility: visible;
+      animation: fadein 0.5s, fadeout 0.5s 4.5s;
+    }
+
+    @keyframes fadein {
+      from {
+        bottom: 0;
+        opacity: 0;
+      }
+
+      to {
+        bottom: 30px;
+        opacity: 1;
+      }
+    }
+
+    @keyframes fadeout {
+      from {
+        bottom: 30px;
+        opacity: 1;
+      }
+
+      to {
+        bottom: 0;
+        opacity: 0;
+      }
     }
 
     .gjs-asset-manager .gjs-am-file-uploader {
@@ -367,6 +428,8 @@
       </mj-body>
     </mjml>
   </div>
+
+  <div class="toast" id="toast">Texto default desde HTML</div>
 
   <script type="text/javascript">
     // Wait for the plugin to be injected by the dev server
