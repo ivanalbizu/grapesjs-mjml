@@ -17,94 +17,88 @@ export default (
 
   const getI18nLabel = (label: string) =>
     editor.I18n.t(`grapesjs-mjml.panels.email.${label}`);
-
   editor.Commands.add(cmdId, {
     onSend() {
       const data = {};
+      const response = {};
 
-      // esta data es de ejmplo, construir según interese
-      const response = {
-        email: {
-          status: 'ko',
-          message: 'Campo email incorrecto'
-        },
-        subject: {
-          status: 'ko',
-          message: 'Campo subject incorrecto'
-        }
-      }
+      //eliminamos los errores si los hubiera 
+      document.getElementById("inputHtml").value =editor.Commands.run(cmdGetMjmlToHtml).html.trim();
       formData = document.querySelectorAll('#form-data [name]');
       formData.forEach((el, index) => {
         data[formData[index].name] = el.value;
       });
-      console.log(data);
-      
-      if (typeof sendEmail === 'function') {
-        sendEmail(data);
-      }
 
-      // se obtienen datos del servidor
-      let statusEmail = response?.email?.status === 'ko';
-      let statusSubject = response?.subject?.status === 'ko';
-
-      // si algo fue mal, mostramos los errores y el input en rojo
-      if (statusEmail || statusSubject) {
-        if (statusEmail) {
-          markupEmail.classList.add('has-error');
-          const emailMessage = markupEmail.querySelector('#emailMessage');
-          emailMessage.innerHTML = response?.email?.message
-        }
-        if (statusSubject) {
-          markupSubject.classList.add('has-error');
-          const emailSubject = markupSubject.querySelector('#emailSubject');
-          emailSubject.innerHTML = response?.subject?.message
-        }
-      // si todo fue bien, cerramos modal
+      const emailMessage = markupEmail.querySelector('#emailMessage');
+      const emailSubject = markupSubject.querySelector('#emailSubject');
+      if (data.email === "") {
+        markupEmail.classList.add('has-error');
+        emailMessage.innerHTML = 'Campo email incorrecto';
       } else {
-        let toast = document.querySelector("#toast");
-        toast?.classList.add('show');
-        toast?.innerHTML = 'Texto metido desde JavaScript';
-
-        setTimeout(function() {
-          toast?.classList.remove('show');
-          toast.className = toast.className.replace("show", "");
-        }, 5000);
-
-        formData.forEach((el) => {
-          el.value = '';
-        });
-        editor.Modal.close();
+        markupEmail.classList.remove('has-error');
+        emailMessage.innerHTML = '';
       }
+      if (data.subject === "") {
+        markupSubject.classList.add('has-error');
+        emailSubject.innerHTML = 'Campo subject incorrecto';
+      } else {
+        markupSubject.classList.remove('has-error');
+        emailSubject.innerHTML = '';
+      }
+      if (typeof sendEmail === 'function' && data.email !== "" && data.subject !== "" && data.inputHtml !=="") {
+        sendEmail(data).then(function(response) {
+          if (response.success === true) {
+            let toast = document.querySelector("#toast");
+            toast?.classList.add('show');
+            toast?.innerHTML = 'Newsletter enviada correctamente';
+            setTimeout(function() {
+              toast?.classList.remove('show');
+              toast.className = toast.className.replace("show", "");
+            }, 5000);
+            formData.forEach((el) => {
+              el.value = '';
+            });
+            editor.Modal.close();
+          } else {
+            let statusEmail = response?.payload?.errors?.email !== undefined;
+            let statusSubject = response?.payload?.errors?.subject !== undefined;
+            if (statusEmail) {
+              markupEmail.classList.add('has-error');
+              const emailMessage = markupEmail.querySelector('#emailMessage');
+              emailMessage.innerHTML = 'Campo email incorrecto';
+            }
+            if (statusSubject) {
+              markupSubject.classList.add('has-error');
+              const emailSubject = markupSubject.querySelector('#emailSubject');
+              emailSubject.innerHTML = 'Campo subject incorrecto';
+            }
+          }
+        });
+      }       
     },
-
     elFactory(type, attributes, ...children) {
       const el = document.createElement(type);
-
       for (const key in attributes) {
         el.setAttribute(key, attributes[key]);
       }
-
       children.forEach((child) => {
         if (typeof child === 'string')
           el.appendChild(document.createTextNode(child));
         else el.appendChild(child);
       });
-
       return el;
     },
-
     createForm() {
       if (document.getElementById("form-data") !== null){
         const el = document.getElementById("form-data");
       } else {
         const el = document.createElement('div');
         el.id = 'form-data';
-
         const btnEl = document.createElement('button');
         btnEl.innerHTML = getI18nLabel('button');
         btnEl.className = `${pfx}btn-prim ${pfx}btn-import`;
+        btnEl.id = "sendMail";
         btnEl.onclick = () => this.onSend();
-
         markupEmail = this.elFactory(
           'div',
           { class: 'input-group' },
@@ -125,7 +119,6 @@ export default (
             class: 'ko'
           })
         );
-
         markupSubject = this.elFactory(
           'div',
           { class: 'input-group' },
@@ -146,7 +139,6 @@ export default (
             class: 'ko'
           })
         );
-
         markupHtml = this.elFactory(
           'div',
           {
@@ -171,19 +163,16 @@ export default (
             editor.Commands.run(cmdGetMjmlToHtml).html.trim()
           )
         );
-  
         el.appendChild(markupEmail);
         el.appendChild(markupSubject);
         el.appendChild(markupHtml);
         el.appendChild(btnEl);
       }
-
       return el;
     },
-
     run(editor, sender = {}) {
       const container = this.createForm();
-
+      editor.Commands.run(cmdGetMjmlToHtml).html.trim()
       editor.Modal.open({
         title: getI18nLabel('title'),
         content: container,
@@ -192,7 +181,6 @@ export default (
         editor.stopCommand(cmdId);
       });
     },
-
     stop(editor) {
       editor.Modal.close();
     },
