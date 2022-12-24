@@ -123,8 +123,7 @@ export type RequiredPluginOptions = Required<PluginOptions>;
 const plugin: grapesjs.Plugin<PluginOptions> = (editor, opt = {}) => {
   const opts: RequiredPluginOptions = {
     blocks: [
-      'mj-1-column', 'mj-2-columns', 'mj-3-columns', 'mj-text', 'mj-button', 'mj-button-link', 'mj-image', 'mj-divider-outer', 'mj-divider-inner', 'mj-social-group',
-      'mj-social-element', 'mj-spacer', 'mj-wrapper', 'mj-group-two-columns', 'mj-group-three-columns', 'mj-raw', 'digital-tools-2'
+      'mj-1-column', 'mj-2-columns', 'mj-3-columns', 'mj-text', 'mj-button', 'mj-button-link', 'mj-image', 'mj-divider-outer', 'mj-divider-inner', 'mj-wrapper', 'mj-group-two-columns', 'mj-group-three-columns', 'digital-tools-2'
     ],
     block: () => ({}),
     codeViewerTheme: 'hopscotch',

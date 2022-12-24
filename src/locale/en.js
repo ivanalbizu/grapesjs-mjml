@@ -17,7 +17,7 @@ export default {
         label: '',
       },
       email: {
-        title: 'Send test Email',
+        title: 'Send Email',
         button: 'Send',
         inputEmail: {
           placeholder: 'Type an email',
