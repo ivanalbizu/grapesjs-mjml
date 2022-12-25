@@ -7,7 +7,10 @@ import { type as typeHero } from './Hero';
 
 export const type = 'mj-image';
 
-export default (editor: grapesjs.Editor, { coreMjmlModel, coreMjmlView }: any) => {
+export default (
+  editor: grapesjs.Editor,
+  { coreMjmlModel, coreMjmlView }: any
+) => {
   editor.Components.addType(type, {
     isComponent: isComponentType(type),
     extend: 'image',
@@ -19,18 +22,22 @@ export default (editor: grapesjs.Editor, { coreMjmlModel, coreMjmlView }: any) =
         name: getName(editor, 'image'),
         draggable: componentsToQuery([typeSection, typeColumn, typeHero]),
         stylable: [
-          'width', 'height',
-          'padding', 'padding-top', 'padding-left', 'padding-right', 'padding-bottom',
-          'border-radius', 'border-top-left-radius', 'border-top-right-radius', 'border-bottom-left-radius', 'border-bottom-right-radius',
-          'border', 'border-width', 'border-style', 'border-color',
-          'container-background-color', 'align',
+          'width',
+          'height',
+          'padding',
+          'padding-top',
+          'padding-left',
+          'padding-right',
+          'padding-bottom',
+          'container-background-color',
+          'align',
         ],
         'style-default': {
           'padding-top': '0',
           'padding-bottom': '0',
           'padding-right': '0',
           'padding-left': '0',
-          'align': 'center',
+          align: 'center',
         },
         traits: ['href', 'rel', 'alt', 'title'],
         void: false,
@@ -41,7 +48,8 @@ export default (editor: grapesjs.Editor, { coreMjmlModel, coreMjmlView }: any) =
       ...coreMjmlView,
       tagName: 'tr',
       attributes: {
-        style: 'pointer-events: all; display: table; width: 100%; user-select: none;',
+        style:
+          'pointer-events: all; display: table; width: 100%; user-select: none;',
       },
 
       getMjmlTemplate() {

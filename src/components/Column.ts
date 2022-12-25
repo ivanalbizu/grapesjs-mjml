@@ -1,11 +1,19 @@
 // Specs: https://documentation.mjml.io/#mj-column
 import type grapesjs from 'grapesjs';
-import { componentsToQuery, getName, isComponentType, mjmlConvert } from './utils';
+import {
+  componentsToQuery,
+  getName,
+  isComponentType,
+  mjmlConvert,
+} from './utils';
 import { type as typeSection } from './Section';
 
 export const type = 'mj-column';
 
-export default (editor: grapesjs.Editor, { opt, coreMjmlModel, coreMjmlView, sandboxEl }: any) => {
+export default (
+  editor: grapesjs.Editor,
+  { opt, coreMjmlModel, coreMjmlView, sandboxEl }: any
+) => {
   const clmPadd = opt.columnsPadding;
 
   editor.Components.addType(type, {
@@ -16,13 +24,17 @@ export default (editor: grapesjs.Editor, { opt, coreMjmlModel, coreMjmlView, san
         name: getName(editor, 'column'),
         draggable: componentsToQuery(typeSection),
         stylable: [
-          'background-color', 'vertical-align', 'width',
-          'border-radius', 'border-top-left-radius', 'border-top-right-radius', 'border-bottom-left-radius', 'border-bottom-right-radius',
-          'border', 'border-width', 'border-style', 'border-color',
+          'background-color',
+          'vertical-align',
+          'width',
+          'border',
+          'border-width',
+          'border-style',
+          'border-color',
         ],
         'style-default': {
-          'vertical-align': 'top'
-        }
+          'vertical-align': 'top',
+        },
       },
     },
 
@@ -36,18 +48,22 @@ export default (editor: grapesjs.Editor, { opt, coreMjmlModel, coreMjmlView, san
       getTemplateFromMjml() {
         const mjmlTmpl = this.getMjmlTemplate();
         const innerMjml = this.getInnerMjmlTemplate();
-        const htmlOutput = mjmlConvert(`${mjmlTmpl.start}
-          ${innerMjml.start}${innerMjml.end}${mjmlTmpl.end}`, opt.fonts);
+        const htmlOutput = mjmlConvert(
+          `${mjmlTmpl.start}
+          ${innerMjml.start}${innerMjml.end}${mjmlTmpl.end}`,
+          opt.fonts
+        );
         const html = htmlOutput.html;
 
         // I need styles for responsive columns
         const styles: string[] = [];
         sandboxEl.innerHTML = html;
-        const styleArr: HTMLStyleElement[] = Array.from(sandboxEl.querySelectorAll('style'));
+        const styleArr: HTMLStyleElement[] = Array.from(
+          sandboxEl.querySelectorAll('style')
+        );
         styleArr.forEach((item) => {
           styles.push(item.innerHTML);
         });
-
 
         const content = html.replace(/<body(.*)>/, '<body>');
         const start = content.indexOf('<body>') + 6;
@@ -67,7 +83,7 @@ export default (editor: grapesjs.Editor, { opt, coreMjmlModel, coreMjmlView, san
         return {
           attributes,
           content: componentEl.innerHTML,
-          style: styles.join(' ')
+          style: styles.join(' '),
         };
       },
 
@@ -89,8 +105,15 @@ export default (editor: grapesjs.Editor, { opt, coreMjmlModel, coreMjmlView, san
 
       renderStyle() {
         const model_style = this.model.get('style') || {};
-        const style = Object.keys(this.model.get('style')).map(attr=>`${attr}:${model_style[attr]};`);
-        this.el.setAttribute('style', `${this.attributes.style} ${style.join(' ')} ${this.el.getAttribute('style')}`);
+        const style = Object.keys(this.model.get('style')).map(
+          (attr) => `${attr}:${model_style[attr]};`
+        );
+        this.el.setAttribute(
+          'style',
+          `${this.attributes.style} ${style.join(' ')} ${this.el.getAttribute(
+            'style'
+          )}`
+        );
         this.checkVisibility();
       },
 
@@ -107,7 +130,9 @@ export default (editor: grapesjs.Editor, { opt, coreMjmlModel, coreMjmlView, san
       },
 
       getTemplateFromEl(sandboxEl: any) {
-        return sandboxEl.firstChild.querySelector('div > table > tbody > tr > td > div');
+        return sandboxEl.firstChild.querySelector(
+          'div > table > tbody > tr > td > div'
+        );
       },
 
       getChildrenSelector() {

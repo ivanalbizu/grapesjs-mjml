@@ -8,7 +8,10 @@ import { type as typeGroup } from './Group';
 
 export const type = 'mj-section';
 
-export default (editor: grapesjs.Editor, { coreMjmlModel, coreMjmlView }: any) => {
+export default (
+  editor: grapesjs.Editor,
+  { coreMjmlModel, coreMjmlView }: any
+) => {
   editor.Components.addType(type, {
     isComponent: isComponentType(type),
 
@@ -19,18 +22,27 @@ export default (editor: grapesjs.Editor, { coreMjmlModel, coreMjmlView }: any) =
         draggable: componentsToQuery([typeBody, typeWrapper]),
         droppable: componentsToQuery([typeColumn, typeGroup]),
         'style-default': {
-          'padding-left': '0px',
-          'padding-right': '0px',
+          'padding-left': '0',
+          'padding-right': '0',
           'padding-top': '0',
           'padding-bottom': '0',
           'text-align': 'center',
         },
         stylable: [
           'text-align',
-          'padding', 'padding-top', 'padding-left', 'padding-right', 'padding-bottom',
-          'background-color', 'background-url', 'background-repeat', 'background-size',
-          'border-radius', 'border-top-left-radius', 'border-top-right-radius', 'border-bottom-left-radius', 'border-bottom-right-radius',
-          'border', 'border-width', 'border-style', 'border-color'
+          'padding',
+          'padding-top',
+          'padding-left',
+          'padding-right',
+          'padding-bottom',
+          'background-color',
+          'background-url',
+          'background-repeat',
+          'background-size',
+          'border',
+          'border-width',
+          'border-style',
+          'border-color',
         ],
       },
     },

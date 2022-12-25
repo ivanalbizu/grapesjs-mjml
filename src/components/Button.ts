@@ -6,7 +6,10 @@ import { type as typeHero } from './Hero';
 
 export const type = 'mj-button';
 
-export default (editor:  grapesjs.Editor, { coreMjmlModel, coreMjmlView }: any) => {
+export default (
+  editor: grapesjs.Editor,
+  { coreMjmlModel, coreMjmlView }: any
+) => {
   editor.Components.addType(type, {
     isComponent: isComponentType(type),
     extend: 'link',
@@ -16,31 +19,37 @@ export default (editor:  grapesjs.Editor, { coreMjmlModel, coreMjmlView }: any) 
         name: getName(editor, 'button'),
         draggable: componentsToQuery([typeColumn, typeHero]),
         highlightable: false,
-        stylable: ['width', 'height',
-          'background-color', 'container-background-color',
-          'font-style', 'font-size', 'font-weight', 'font-family', 'color',
-          'text-decoration', 'align',
-          'vertical-align', 'text-transform',
-          'padding', 'padding-top', 'padding-left', 'padding-right', 'padding-bottom',
-          'border-radius', 'border-top-left-radius', 'border-top-right-radius', 'border-bottom-left-radius', 'border-bottom-right-radius',
-          'border', 'border-width', 'border-style', 'border-color',],
+        stylable: [
+          'background-color',
+          'font-style',
+          'font-size',
+          'font-weight',
+          'font-family',
+          'color',
+          'text-decoration',
+          'align',
+          'text-transform',
+          'padding',
+          'padding-top',
+          'padding-left',
+          'padding-right',
+          'padding-bottom',
+        ],
         'style-default': {
           'background-color': '#FF7900',
-          'border-radius': '0px',
           'font-family': 'Helvetica,Arial,sans-serif',
           'font-size': '16px',
           'line-height': '18px',
           'font-weight': '400',
-          'color': '#ffffff',
+          color: '#ffffff',
           'vertical-align': 'middle',
           'padding-top': '10px',
           'padding-bottom': '10px',
-          'padding-right': '0px',
-          'padding-left': '0px',
-          'align': 'center',
+          'padding-right': '0',
+          'padding-left': '0',
+          align: 'center',
         },
-        traits: ['href'],
-        // 'container-background-color', 'inner-padding'
+        traits: ['href', 'title'],
       },
     },
 

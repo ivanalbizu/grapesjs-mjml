@@ -6,7 +6,10 @@ import { type as typeHero } from './Hero';
 
 export const type = 'mj-text';
 
-export default (editor: grapesjs.Editor, { coreMjmlModel, coreMjmlView }: any) => {
+export default (
+  editor: grapesjs.Editor,
+  { coreMjmlModel, coreMjmlView }: any
+) => {
   editor.Components.addType(type, {
     extend: 'text',
     extendFnView: ['onActive'],
@@ -19,20 +22,33 @@ export default (editor: grapesjs.Editor, { coreMjmlModel, coreMjmlView }: any) =
         draggable: componentsToQuery([typeColumn, typeHero]),
         highlightable: false,
         stylable: [
-          'height', 'font-style', 'font-size', 'font-weight', 'font-family', 'color',
-          'line-height', 'letter-spacing', 'text-decoration', 'align', 'text-transform',
-          'padding', 'padding-top', 'padding-left', 'padding-right', 'padding-bottom',
-          'container-background-color'
+          'height',
+          'font-style',
+          'font-size',
+          'font-weight',
+          'font-family',
+          'color',
+          'line-height',
+          'letter-spacing',
+          'text-decoration',
+          'align',
+          'text-transform',
+          'padding',
+          'padding-top',
+          'padding-left',
+          'padding-right',
+          'padding-bottom',
+          'container-background-color',
         ],
         'style-default': {
           'padding-top': '10px',
           'padding-bottom': '10px',
-          'padding-right': '0px',
-          'padding-left': '0px',
+          'padding-right': '0',
+          'padding-left': '0',
           'font-family': 'Helvetica,Arial,sans-serif',
           'font-size': '16px',
           'line-height': '18px',
-          'align': 'left',
+          align: 'left',
         },
       },
     },
