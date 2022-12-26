@@ -14,10 +14,11 @@ var _default = {
         desktop: 'Escritorio',
         tablet: 'Tableta',
         mobile: 'Móvil',
-        import: 'Importar MJML: importante, usar esto &lt;mjml owa="desktop"&gt;'
+        import: 'Importar MJML: importante, usar esto &lt;mjml owa="desktop"&gt;',
+        email: 'Enviar email'
       },
       import: {
-        title: 'Importar MJML',
+        title: 'Importar MJML: : importante, usar &lt;mjml owa="desktop"&gt;',
         button: 'Importar',
         label: ''
       },
